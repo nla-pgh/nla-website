@@ -11,7 +11,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120207143553) do
+ActiveRecord::Schema.define(:version => 20120207185737) do
+
+  create_table "copywriting_phrase_translations", :force => true do |t|
+    t.integer  "copywriting_phrase_id"
+    t.string   "locale"
+    t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "copywriting_phrase_translations", ["copywriting_phrase_id"], :name => "index_c8fbec01a288d0aef8ba987126084c4d06953304"
+
+  create_table "copywriting_phrases", :force => true do |t|
+    t.string   "name"
+    t.text     "default"
+    t.text     "value"
+    t.string   "scope"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "phrase_type"
+  end
+
+  add_index "copywriting_phrases", ["name", "scope"], :name => "index_copywriting_phrases_on_name_and_scope"
+
+  create_table "image_pages", :id => false, :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+  end
+
+  add_index "image_pages", ["image_id"], :name => "index_image_pages_on_image_id"
+  add_index "image_pages", ["page_id"], :name => "index_image_pages_on_page_id"
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -24,6 +57,14 @@ ActiveRecord::Schema.define(:version => 20120207143553) do
     t.string   "image_uid"
     t.string   "image_ext"
   end
+
+  create_table "images_portfolio_entries", :id => false, :force => true do |t|
+    t.integer "image_id"
+    t.integer "portfolio_entry_id"
+    t.integer "position"
+  end
+
+  add_index "images_portfolio_entries", ["image_id", "portfolio_entry_id"], :name => "composite_key_index"
 
   create_table "page_part_translations", :force => true do |t|
     t.integer  "page_part_id"
@@ -81,6 +122,34 @@ ActiveRecord::Schema.define(:version => 20120207143553) do
   add_index "pages", ["lft"], :name => "index_pages_on_lft"
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
+
+  create_table "portfolio_entries", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.integer  "title_image_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "portfolio_entries", ["id"], :name => "index_portfolio_entries_on_id"
+  add_index "portfolio_entries", ["lft"], :name => "index_portfolio_entries_on_lft"
+  add_index "portfolio_entries", ["parent_id"], :name => "index_portfolio_entries_on_parent_id"
+  add_index "portfolio_entries", ["rgt"], :name => "index_portfolio_entries_on_rgt"
+
+  create_table "portfolio_entry_translations", :force => true do |t|
+    t.integer  "portfolio_entry_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "portfolio_entry_translations", ["portfolio_entry_id"], :name => "index_0de7c1ce46009206ebdf2ec91884e947efdb7bf6"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
