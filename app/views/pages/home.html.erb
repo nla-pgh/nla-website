@@ -1,1 +1,6 @@
-<%= render :partial => "/shared/content_page" %>
+<section id='body_content'>
+	<%= raw @page.content_for(:body) %>
+</section>
+<section id='side_body_content'>
+	<%= raw @page.content_for(:side_body) %>
+</section>

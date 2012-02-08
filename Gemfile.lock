@@ -48,6 +48,7 @@ GEM
     globalize3 (0.1.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
+    haml (3.1.4)
     i18n (0.5.0)
     json (1.6.5)
     mail (2.2.19)
@@ -143,6 +144,7 @@ GEM
       refinerycms-base (= 1.0.9)
     routing-filter (0.3.0)
       actionpack
+    sass (3.1.14)
     seo_meta (1.1.1)
       refinerycms-generators (~> 1.0.1)
     thor (0.14.6)
@@ -159,9 +161,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml (>= 3.0.6)
   pg
   refinerycms (~> 1.0.9)
   refinerycms-copywriting
   refinerycms-i18n (~> 1.0.0)
   refinerycms-page-images (~> 1.0)
   refinerycms-portfolio (~> 0.9.9)
+  sass

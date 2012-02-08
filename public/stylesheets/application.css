@@ -1,4 +1,6 @@
-/*
-  Override default refinery application CSS below.
-  Formatting applies to all frontend.
-*/
+body {
+  background-color: #fffff0;
+  color: #282828; }
+
+nav {
+  background-color: #af0a0a; }

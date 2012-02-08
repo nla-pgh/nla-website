@@ -35,6 +35,11 @@ gem 'pg'
 
 gem 'refinerycms',              '~> 1.0.9'
 
+group :development do
+		gem 'sass'
+		gem 'haml', '>=3.0.6'
+end
+
 =begin #testing
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
