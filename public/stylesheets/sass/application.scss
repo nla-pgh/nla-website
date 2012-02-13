@@ -7,15 +7,71 @@ body {
 		}
 
 		color: $grey;
+
+		text-align: center;
+}
+
+header {
+		border: {
+				color: $red;
+				bottom-style: outset;
+		}
+
+		background: {
+		}
+
 }
 
 nav {
 		background: {
 				color: $red;
 		}
+
+		a {
+				&:link {
+						color: $white;
+						text-decoration: none;
+				}
+
+				&:visited {
+						color: $white;
+						text-decoration: none;
+				}
+		}
+}
+
+
+footer {
+		border: {
+				top-style: outset;
+				color: $red;
+		}
 }
 
 /** HTML id's **/
+#page_container {
+		width: 65%;
+		
+		display: none;
+
+		header {
+				width: 100%;
+		}
+
+		footer {
+				width: 100%;
+		}
+
+		/** Centering the page content **/
+
+		display: table;
+		margin: auto;
+		text-align: left;
+}
+
+#page {
+		width: 100%;
+}
 
 /** HTML classes **/
 

@@ -1,6 +1,41 @@
+/** HTML parts **/
 body {
   background-color: #fffff0;
-  color: #282828; }
+  color: #282828;
+  text-align: center; }
+
+header {
+  border-color: #af0a0a;
+  border-bottom-style: outset;
+  background-color: #ffffff; }
 
 nav {
   background-color: #af0a0a; }
+  nav a:link {
+    color: #fffff0;
+    text-decoration: none; }
+  nav a:visited {
+    color: #fffff0;
+    text-decoration: none; }
+
+footer {
+  border-top-style: outset;
+  border-color: #af0a0a; }
+
+/** HTML id's **/
+#page_container {
+  width: 65%;
+  display: none;
+  /** Centering the page content **/
+  display: table;
+  margin: auto;
+  text-align: left; }
+  #page_container header {
+    width: 100%; }
+  #page_container footer {
+    width: 100%; }
+
+#page {
+  width: 100%; }
+
+/** HTML classes **/
