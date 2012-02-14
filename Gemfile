@@ -38,11 +38,6 @@ gem 'refinerycms',              '~> 1.0.9'
 gem 'sass'
 gem 'haml', '>=3.0.6'
 
-group :development do
-		gem 'sass'
-		gem 'haml', '>=3.0.6'
-end
-
 =begin #testing
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
@@ -72,13 +67,13 @@ end
 # gem 'refinerycms-inquiries',    '~> 1.0'
 gem "refinerycms-news",         '~> 1.2'
 # gem 'refinerycms-blog',         '~> 1.6'
-gem 'refinerycms-page-images',  '~> 1.0'
+# gem 'refinerycms-page-images',  '~> 1.0'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 1.0.0'
 
 # Additional plugins for NLA
-gem 'refinerycms-portfolio', '~>0.9.9'
+# gem 'refinerycms-portfolio', '~>0.9.9'
 gem 'refinerycms-copywriting'
 
 # END USER DEFINED
