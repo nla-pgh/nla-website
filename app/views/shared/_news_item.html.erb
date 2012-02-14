@@ -1,0 +1,10 @@
+<h3 id='news_title'>
+		<%= item.title %>
+</h3>
+<section id='time_posted'>
+Posted: <%= distance_of_time_in_words_to_now(item.publish_date) %>
+</section>
+<section id='news_body'>
+<%= truncate(strip_tags(item.body), length: 200) %>
+<p> <%= link_to "Read full article", item %> </p>
+</section>

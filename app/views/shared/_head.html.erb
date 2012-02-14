@@ -17,4 +17,6 @@
   <%= render :partial => '/shared/google_analytics' unless local_request? %>
 
   <%= javascript_include_tag 'modernizr-min' %>
+
+	<%= auto_discovery_link_tag(:rss, news_items_url(:format => 'rss')) %>
 </head>
