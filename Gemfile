@@ -75,5 +75,6 @@ gem 'refinerycms-i18n',         '~> 1.0.0'
 # Additional plugins for NLA
 # gem 'refinerycms-portfolio', '~>0.9.9'
 gem 'refinerycms-copywriting'
+gem 'refinerycms-search', '~> 1.0.0', :git => 'git://github.com/resolve/refinerycms-search.git'
 
 # END USER DEFINED

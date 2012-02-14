@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120213232950) do
+ActiveRecord::Schema.define(:version => 20120214144633) do
 
   create_table "copywriting_phrase_translations", :force => true do |t|
     t.integer  "copywriting_phrase_id"

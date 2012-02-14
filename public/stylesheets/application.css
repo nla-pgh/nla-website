@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+html {
+  font-family: 'Ubuntu', sans-serif; }
+
 /** HTML parts **/
 body {
   background-color: #fffff0;
@@ -24,7 +28,6 @@ footer {
 /** HTML id's **/
 #page_container {
   width: 65%;
-  display: none;
   /** Centering the page content **/
   display: table;
   margin: auto;
