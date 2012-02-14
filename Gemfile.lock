@@ -123,6 +123,8 @@ GEM
       dragonfly (~> 0.9.0)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 1.0.9)
+    refinerycms-news (1.2.0)
+      refinerycms-core (~> 1.0.0)
     refinerycms-page-images (1.0.4)
       refinerycms-pages (>= 0.9.9.1)
     refinerycms-pages (1.0.9)
@@ -166,6 +168,7 @@ DEPENDENCIES
   refinerycms (~> 1.0.9)
   refinerycms-copywriting
   refinerycms-i18n (~> 1.0.0)
+  refinerycms-news (~> 1.2)
   refinerycms-page-images (~> 1.0)
   refinerycms-portfolio (~> 0.9.9)
   sass
