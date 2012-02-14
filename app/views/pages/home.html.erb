@@ -1,5 +1,8 @@
 <%=raw copywriting('Introduction Presentation', scope: 'body', phrase_type: 'text') %>
 
+<%= render partial: "/shared/news" %>
+
+
 <section id='body_content'>
 	<%= raw @page.content_for(:body) %>
 </section>
