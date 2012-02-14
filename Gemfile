@@ -35,6 +35,9 @@ gem 'pg'
 
 gem 'refinerycms',              '~> 1.0.9'
 
+gem 'sass'
+gem 'haml', '>=3.0.6'
+
 group :development do
 		gem 'sass'
 		gem 'haml', '>=3.0.6'
