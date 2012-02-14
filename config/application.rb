@@ -45,5 +45,9 @@ module HeroWebsite
 				Rails.root.join('public/stylesheets').to_s
 		)
 
+		# Website Search Function
+		config.to_prepare do
+				Refinery.searchable_models = [Page, NewsItem, CopywritingPhrase]
+		end
   end
 end

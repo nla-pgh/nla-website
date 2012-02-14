@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/resolve/refinerycms-search.git
+  revision: 2cd70c61186df1f9cfcce16fb1497ee0838e2b0b
+  specs:
+    refinerycms-search (1.0.0)
+      refinerycms-core (>= 1.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -165,4 +172,5 @@ DEPENDENCIES
   refinerycms-copywriting
   refinerycms-i18n (~> 1.0.0)
   refinerycms-news (~> 1.2)
+  refinerycms-search (~> 1.0.0)!
   sass
