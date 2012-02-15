@@ -1,5 +1,17 @@
 @import 'branding';
 
+/** SASS Mixins **/
+
+@mixin border_on($side, $style, $width: thick, $color: $grey) {
+		border-#{$side}: $style;
+		border-width: $width;
+		border-color: $color;
+}
+
+@mixin rounded($horiz, $vert, $radius: 5px) {
+		border-#{$horiz}-#{$vert}-radius: $radius;
+}
+
 /** HTML parts **/
 body {
 		background: {
@@ -12,10 +24,9 @@ body {
 }
 
 header {
-		border: {
-				color: $red;
-				bottom-style: outset;
-		}
+		@include border_on(bottom, outset);
+		@include rounded(bottom, right);
+		@include rounded(bottom, left);
 }
 
 nav {
@@ -39,10 +50,9 @@ nav {
 
 
 footer {
-		border: {
-				top-style: outset;
-				color: $red;
-		}
+			@include border_on(top, inset);
+			@include rounded(top, left);
+			@include rounded(top, right);
 }
 
 /** HTML id's **/
@@ -70,4 +80,3 @@ footer {
 }
 
 /** HTML classes **/
-

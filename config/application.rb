@@ -49,5 +49,8 @@ module HeroWebsite
 		config.to_prepare do
 				Refinery.searchable_models = [Page, NewsItem, CopywritingPhrase]
 		end
+
+		# Set locale and time
+		config.time_zone = "Eastern Time (US & Canada)"
   end
 end

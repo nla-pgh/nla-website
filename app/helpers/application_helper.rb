@@ -11,14 +11,15 @@ module ApplicationHelper
 		end
 
 		def twitter
-				image_tag("twitter.png", alt: "Follow us on Twitter!", size: "24x24")
+				image_tag("twitter.png", alt: "Follow us on Twitter!", size: "50x50")
 		end
 
 		def facebook
-				image_tag("fb_icon.png", alt: "Like us on Facebook!", size: "24x24")
+				image_tag("fb_icon.png", alt: "Like us on Facebook!", size: "50x50")
 		end
 
 		def google_plus
-				image_tag("gplus.png", alt: "+1 us on Google Plus!", size: "24x24")
+				image_tag("gplus.png", alt: "+1 us on Google Plus!", size: "50x50")
 		end
+
 end
