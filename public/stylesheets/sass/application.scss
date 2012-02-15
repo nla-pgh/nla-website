@@ -23,10 +23,24 @@ body {
 		text-align: center;
 }
 
+header, footer {
+		background: {
+				color: $red;
+		}
+}
+
 header {
+		display: table;
+		margin: 0 auto;
+		text-align: left;
+}
+
+#header_inner {
 		@include border_on(bottom, outset);
 		@include rounded(bottom, right);
 		@include rounded(bottom, left);
+
+		width: 75%;
 }
 
 nav {
@@ -57,7 +71,7 @@ footer {
 
 /** HTML id's **/
 #page_container {
-		width: 65%;
+		width: 100%;
 		
 
 		header {
@@ -80,3 +94,8 @@ footer {
 }
 
 /** HTML classes **/
+.bg_filled {
+		background: {
+				color: $red;
+		}
+}

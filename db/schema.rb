@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214144633) do
+ActiveRecord::Schema.define(:version => 20120215035456) do
 
   create_table "copywriting_phrase_translations", :force => true do |t|
     t.integer  "copywriting_phrase_id"
@@ -65,6 +65,26 @@ ActiveRecord::Schema.define(:version => 20120214144633) do
   end
 
   add_index "images_portfolio_entries", ["image_id", "portfolio_entry_id"], :name => "composite_key_index"
+
+  create_table "inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "spam",       :default => false
+  end
+
+  add_index "inquiries", ["id"], :name => "index_inquiries_on_id"
+
+  create_table "inquiry_settings", :force => true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.boolean  "destroyable"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news_item_translations", :force => true do |t|
     t.integer  "news_item_id"

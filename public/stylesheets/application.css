@@ -9,12 +9,21 @@ body {
   color: #282828;
   text-align: center; }
 
+header, footer {
+  background-color: #af0a0a; }
+
 header {
+  display: table;
+  margin: 0 auto;
+  text-align: left; }
+
+#header_inner {
   border-bottom: outset;
   border-width: thick;
   border-color: #282828;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; }
+  border-bottom-left-radius: 5px;
+  width: 75%; }
 
 nav {
   background-color: #af0a0a; }
@@ -34,7 +43,7 @@ footer {
 
 /** HTML id's **/
 #page_container {
-  width: 65%;
+  width: 100%;
   /** Centering the page content **/
   display: table;
   margin: auto;
@@ -48,3 +57,5 @@ footer {
   width: 100%; }
 
 /** HTML classes **/
+.bg_filled {
+  background-color: #af0a0a; }

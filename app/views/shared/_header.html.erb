@@ -1,3 +1,4 @@
+<div id='header_inner'>
 <%= render partial: '/shared/search' %>
 
 <%= link_to(logo, root_path, id: 'logo') %>
@@ -7,4 +8,5 @@
 <%= render(:partial => "/shared/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'
-           }) %>
+}) %>
+</div>
