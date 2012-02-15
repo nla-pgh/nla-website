@@ -1,13 +1,15 @@
-<div id='hero_container'>
+<section id='hero_container'>
 		<section class=".prezi-player"><%=raw sanitize(copywriting('Introduction Presentation', scope: 'body', phrase_type: 'text'), 
 														 :tags => %w(object embed param style p),
 															:attributes => %w(type media id name classid width height value src allowfullscreen
 																							 allowscriptaccess bgcolor flashvars)).sub(/<p>.*<\/p>/, "") %></section>
 		<section id="take_action_container"><%= render partial: "/shared/take_action" %></section>
-</div>
+</section>
 
+<section id='news_container'>
 <%= render partial: "/shared/news" %>
+</section>
 
-
+<section id='social_media_container'>
 <%= render partial: "/shared/social_network_feed" %>
-
+</section>

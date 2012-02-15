@@ -2,7 +2,7 @@
 
 /** SASS Mixins **/
 
-@mixin border_on($side, $style, $width: thick, $color: $grey) {
+@mixin border_on($side, $style, $width: thick, $color: $red) {
 		border-#{$side}: $style;
 		border-width: $width;
 		border-color: $color;
@@ -20,27 +20,29 @@ body {
 
 		color: $grey;
 
-		text-align: center;
-}
-
-header, footer {
-		background: {
-				color: $red;
-		}
-}
-
-header {
-		display: table;
-		margin: 0 auto;
 		text-align: left;
 }
 
-#header_inner {
+#header, #footer {
+		background: {
+				color: $red;
+		}
+
+		text-align: left;
+		color: $white;
+
+}
+
+#header_inner, #footer_inner {
+		width: 75%;
+		margin: auto;
+}
+
+#header {
 		@include border_on(bottom, outset);
 		@include rounded(bottom, right);
 		@include rounded(bottom, left);
 
-		width: 75%;
 }
 
 nav {
@@ -63,7 +65,7 @@ nav {
 }
 
 
-footer {
+#footer {
 			@include border_on(top, inset);
 			@include rounded(top, left);
 			@include rounded(top, right);
@@ -90,7 +92,7 @@ footer {
 }
 
 #page {
-		width: 100%;
+		width: 75%;
 }
 
 /** HTML classes **/

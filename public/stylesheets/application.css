@@ -7,23 +7,23 @@ html {
 body {
   background-color: #fffff0;
   color: #282828;
-  text-align: center; }
-
-header, footer {
-  background-color: #af0a0a; }
-
-header {
-  display: table;
-  margin: 0 auto;
   text-align: left; }
 
-#header_inner {
+#header, #footer {
+  background-color: #af0a0a;
+  text-align: left;
+  color: #fffff0; }
+
+#header_inner, #footer_inner {
+  width: 75%;
+  margin: auto; }
+
+#header {
   border-bottom: outset;
   border-width: thick;
-  border-color: #282828;
+  border-color: #af0a0a;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  width: 75%; }
+  border-bottom-left-radius: 5px; }
 
 nav {
   background-color: #af0a0a; }
@@ -34,10 +34,10 @@ nav {
     color: #fffff0;
     text-decoration: none; }
 
-footer {
+#footer {
   border-top: inset;
   border-width: thick;
-  border-color: #282828;
+  border-color: #af0a0a;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px; }
 
@@ -54,7 +54,7 @@ footer {
     width: 100%; }
 
 #page {
-  width: 100%; }
+  width: 75%; }
 
 /** HTML classes **/
 .bg_filled {
