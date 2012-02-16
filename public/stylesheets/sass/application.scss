@@ -33,6 +33,10 @@ body {
 
 nav {
 
+		background: {
+				color: $red;
+		}
+
 		a {
 				&:link {
 						color: $white;
@@ -62,11 +66,11 @@ nav {
 
 #header, #footer {
 		text-align: left;
-		color: $white;
+		color: $grey;
 }
 
 
-#header {
+#header_inner {
 		@include border_on(bottom, outset);
 		@include rounded(bottom, right);
 		@include rounded(bottom, left);
@@ -79,7 +83,7 @@ nav {
 }
 
 #search {
-		background-color: $white;
+		background-color: $red;
 		padding: 10px;
 		@include rounded(bottom, left, 10px);
 		@include rounded(bottom, right, 10px);
@@ -95,7 +99,7 @@ nav {
 #logo{
 }
 
-#footer {
+#footer_inner {
 			@include border_on(top, inset);
 			@include rounded(top, left);
 			@include rounded(top, right);
@@ -106,7 +110,7 @@ nav {
 /** HTML classes **/
 .bg_filled {
 		background: {
-				color: $red;
+				color: $white;
 		}
 }
 
@@ -125,3 +129,6 @@ nav {
 .align_vert {
 		position: relative;
 }
+
+.button {
+}	

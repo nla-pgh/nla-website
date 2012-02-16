@@ -7,7 +7,7 @@ module ApplicationHelper
 		# Creating Logos, Icons, and other Image
 
 		def logo
-				image_tag("NLA_logo_words_alt.svg", alt: "Neighborhood Learning Alliance Logo", id: 'logo', size: "500x200")
+				image_tag("NLA_logo_words.svg", alt: "Neighborhood Learning Alliance Logo", id: 'logo', size: "500x200")
 		end
 
 		def twitter
