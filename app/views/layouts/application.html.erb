@@ -6,13 +6,13 @@
     <%= site_bar -%>
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <section id="page_container">
-      <section id="header" class='bg_filled'>
+      <section id="header">
         <%= render :partial => "/shared/header" -%>
       </section>
-			<section id='page' class='fixed_width'>
+			<section id='page' class='centered'>
         <%= yield %>
       </section>
-      <section id="footer" class='bg_filled'>
+      <section id="footer">
         <%= render :partial => "/shared/footer" -%>
       </section>
     </section>

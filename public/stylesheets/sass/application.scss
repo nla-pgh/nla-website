@@ -8,7 +8,7 @@
 		border-color: $color;
 }
 
-@mixin rounded($horiz, $vert, $radius: 5px) {
+@mixin rounded($horiz, $vert, $radius: 2em) {
 		border-#{$horiz}-#{$vert}-radius: $radius;
 }
 
@@ -20,115 +20,56 @@
 		}
 }
 
-/** HTML parts **/
 body {
 		background: {
 				color: $white;
 		}
 
 		color: $grey;
-
 		text-align: left;
-}
-
-nav {
-
-		background: {
-				color: $red;
-		}
-
-		a {
-				&:link {
-						color: $white;
-						text-decoration: none;
-				}
-
-				&:visited {
-						color: $white;
-						text-decoration: none;
-				}
-		}
-}
-
-
-/** HTML id's **/
-#page_container {
-
-		/** Centering the page content **/
-		display: block;
-		margin: auto;
-		text-align: left;
-}
-
-#page {
-		width: 75%;
+		
 }
 
 #header, #footer {
-		text-align: left;
-		color: $grey;
+		background: $white;
 }
 
-
-#header_inner {
-		@include border_on(bottom, outset);
-		@include rounded(bottom, right);
-		@include rounded(bottom, left);
-		/**@include bg_image(url(header.png));**/
-}
-
-#header_inner, #footer_inner {
-		width: 75%;
+.centered {
+		min-width: 60%;
+		max-width: 75%;
 		margin: auto;
 }
 
-#search {
-		background-color: $red;
-		padding: 10px;
-		@include rounded(bottom, left, 10px);
-		@include rounded(bottom, right, 10px);
-}
+nav {
+		width: 100%;
+		
+		float: left;
 
-#social_network_icons {
-}
+		ul {
+				margin: 0px;
+		}
 
-#logo_container {
-		padding-top: 10px;
-}
+		li {
+				list-style: none;
+				float: left;
 
-#logo{
-}
-
-#footer_inner {
-			@include border_on(top, inset);
-			@include rounded(top, left);
-			@include rounded(top, right);
-
-			/**@include bg_image(url(footer.png));**/
-}
-
-/** HTML classes **/
-.bg_filled {
-		background: {
-				color: $white;
+				a {
+						color: $white;
+				}
 		}
 }
 
-.align_right {
-		float:right;
+.standard {
+		background: $white;
+		color: $grey;
 }
 
-.icon {
-		display: block;
+.invert {
+		background: $red;
+		color: $white;
 }
 
-.fixed_width {
-		min-width: 800px;
+.selected {
+		background: $white;
+		color: $grey;
 }
-
-.align_vert {
-		position: relative;
-}
-
-.button {
-}	
