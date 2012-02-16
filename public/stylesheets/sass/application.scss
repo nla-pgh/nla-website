@@ -12,6 +12,14 @@
 		border-#{$horiz}-#{$vert}-radius: $radius;
 }
 
+@mixin bg_image($url) {
+		background: {
+				position: top left;
+				repeat: repeat-x;
+				image: $url;
+		}
+}
+
 /** HTML parts **/
 body {
 		background: {
@@ -23,33 +31,7 @@ body {
 		text-align: left;
 }
 
-#header, #footer {
-		background: {
-				color: $red;
-		}
-
-		text-align: left;
-		color: $white;
-
-}
-
-#header_inner, #footer_inner {
-		width: 75%;
-		margin: auto;
-}
-
-#header {
-		@include border_on(bottom, outset);
-		@include rounded(bottom, right);
-		@include rounded(bottom, left);
-
-}
-
 nav {
-		background: {
-				color: $red;
-
-		}
 
 		a {
 				&:link {
@@ -65,28 +47,11 @@ nav {
 }
 
 
-#footer {
-			@include border_on(top, inset);
-			@include rounded(top, left);
-			@include rounded(top, right);
-}
-
 /** HTML id's **/
 #page_container {
-		width: 100%;
-		
-
-		header {
-				width: 100%;
-		}
-
-		footer {
-				width: 100%;
-		}
 
 		/** Centering the page content **/
-
-		display: table;
+		display: block;
 		margin: auto;
 		text-align: left;
 }
@@ -95,9 +60,68 @@ nav {
 		width: 75%;
 }
 
+#header, #footer {
+		text-align: left;
+		color: $white;
+}
+
+
+#header {
+		@include border_on(bottom, outset);
+		@include rounded(bottom, right);
+		@include rounded(bottom, left);
+		/**@include bg_image(url(header.png));**/
+}
+
+#header_inner, #footer_inner {
+		width: 75%;
+		margin: auto;
+}
+
+#search {
+		background-color: $white;
+		padding: 10px;
+		@include rounded(bottom, left, 10px);
+		@include rounded(bottom, right, 10px);
+}
+
+#social_network_icons {
+}
+
+#logo_container {
+		padding-top: 10px;
+}
+
+#logo{
+}
+
+#footer {
+			@include border_on(top, inset);
+			@include rounded(top, left);
+			@include rounded(top, right);
+
+			/**@include bg_image(url(footer.png));**/
+}
+
 /** HTML classes **/
 .bg_filled {
 		background: {
 				color: $red;
 		}
+}
+
+.align_right {
+		float:right;
+}
+
+.icon {
+		display: block;
+}
+
+.fixed_width {
+		min-width: 800px;
+}
+
+.align_vert {
+		position: relative;
 }

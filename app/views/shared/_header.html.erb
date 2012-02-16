@@ -1,12 +1,14 @@
-<div id='header_inner'>
+<section id='header_inner' class='fixed_width'>
+
 <%= render partial: '/shared/search' %>
 
-<%= link_to(logo, root_path, id: 'logo') %>
-
+<section id='logo_container'>
 <%= render partial: '/shared/social_network_icons' %>
+<%= link_to(logo, root_path, id: 'logo') %>
+</section>
 
 <%= render(:partial => "/shared/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'
 }) %>
-</div>
+</section>

@@ -6,16 +6,13 @@
     <%= site_bar -%>
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <section id="page_container">
-      <section id="header">
+      <section id="header" class='bg_filled'>
         <%= render :partial => "/shared/header" -%>
       </section>
-			<section id='page'>
-				<section id='body_embed'>
-				<%=raw copywriting('Multimedia Embed', { :scope => 'Body', :page => @page, :phrase_type => "text" }) %>
-				</section>
+			<section id='page' class='fixed_width'>
         <%= yield %>
       </section>
-      <section id="footer">
+      <section id="footer" class='bg_filled'>
         <%= render :partial => "/shared/footer" -%>
       </section>
     </section>

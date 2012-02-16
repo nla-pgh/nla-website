@@ -13,6 +13,15 @@ home_page = Page.create(:title => "Home",
             :deletable => false,
             :link_url => "/",
             :position => (page_position += 1))
+home_page.parts.create( {
+							:title => "Body",
+							:body => "",
+							:position => 0 })
+
+home_page.parts.create( {
+								:title => "Side Body",
+								:body => "",
+								:position => 1 } )
 
 home_page_position = -1
 page_not_found_page = home_page.children.create(:title => "Page not found",

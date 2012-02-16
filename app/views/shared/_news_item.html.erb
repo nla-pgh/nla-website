@@ -6,7 +6,7 @@
 <small> Posted: <%= distance_of_time_in_words_to_now(item.publish_date) %> </small>
 </section>
 <section id='news_link'>
-<%= truncate(strip_tags(item.body), length: 200) %>
+<%= truncate(strip_tags(item.body), length: 250) %>
 <p> <%= link_to "Read full article", item %> </p>
 </section>
 </div>

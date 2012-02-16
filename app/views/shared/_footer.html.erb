@@ -1,5 +1,5 @@
-<div id='footer_inner'>
-<% copywriting_options( scope: 'footer', phrase_type: 'wysiwyg' ) do %>
+<section id='footer_inner' class="fixed_width">
+<% copywriting_options( scope: 'footer', phrase_type: 'wysiwyg', default: 'Multiline Footer Fields') do %>
 
 		<span id='address'>
 				<%= raw copywriting('address') %>
@@ -14,4 +14,4 @@
 
 <%= translate(".copyright", :year => Time.now.year,
 		:site_name => RefinerySetting.find_or_set(:site_name, "Neighborhood Learning Alliance")) %>
-</div>
+</section>
