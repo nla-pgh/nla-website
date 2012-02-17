@@ -1,17 +1,22 @@
 <section id='header_inner' class='centered'>
 
-<section id='header_right'>
+<section class='right'>
 <%= render partial: '/shared/search' %>
-
-<section id='social_network_icons_header' >
-<%= render partial: '/shared/social_network_icons' %>
+		<section class='right'>
+				<table>
+						<tr>
+								<td>
+										<%= render partial: '/shared/contact_info' %>
+								</td>
+								<td>
+										<%= render partial: '/shared/social_network_icons' %>
+								</td>
+						</tr>
+				</table>
+		</section>
 </section>
 
-</section>
-
-<section id='logo_container'>
 <%= link_to(logo, root_path, id: 'logo') %>
-</section>
 
 <%= render(:partial => "/shared/menu", :locals => {
              :dom_id => 'menu',

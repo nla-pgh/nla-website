@@ -8,8 +8,15 @@
 		border-color: $color;
 }
 
-@mixin rounded($horiz, $vert, $radius: 2em) {
+@mixin rounded($horiz, $vert, $radius: 1em) {
 		border-#{$horiz}-#{$vert}-radius: $radius;
+}
+
+@mixin all_round($radius: 1em) {
+		@include rounded(top, left, $radius);
+		@include rounded(top, right, $radius);
+		@include rounded(bottom, left, $radius);
+		@include rounded(bottom, right, $radius);
 }
 
 @mixin bg_image($url) {
@@ -27,11 +34,9 @@ body {
 
 		color: $grey;
 		text-align: left;
+		font-size: medium;
+		margin: 0;
 		
-}
-
-#header, #footer {
-		background: $white;
 }
 
 .centered {
@@ -40,23 +45,12 @@ body {
 		margin: auto;
 }
 
-nav {
-		width: 100%;
-		
+.left {
 		float: left;
+}
 
-		ul {
-				margin: 0px;
-		}
-
-		li {
-				list-style: none;
-				float: left;
-
-				a {
-						color: $white;
-				}
-		}
+.right {
+		float: right;
 }
 
 .standard {
@@ -70,6 +64,191 @@ nav {
 }
 
 .selected {
-		background: $white;
-		color: $grey;
+		a {
+				text-transform: uppercase;
+		}
+
+		background: $grey;
 }
+
+.address, .contact {
+		p {
+				margin: 0;
+		}
+}
+
+nav {
+		width: 100%;
+		float: left;
+
+		margin: {
+				top: 1em;
+				bottom: 1em;
+		}
+
+		ul {
+				padding: {
+						left: 3em;
+				}
+
+				margin: 0;
+				
+				.first {
+						@include border_on(left, none);
+				}
+
+				.last {
+							padding: {
+									right: 1em;
+							}
+				}
+		
+				li {
+						list-style: none;
+						float: left;
+						
+						padding: {
+								top: 0.5em;
+								bottom: 0.5em;
+								left: 1em;
+								right: 1em;
+						}
+
+						@include border_on(left, solid, 0.2em, $white);
+
+						a {
+								text-decoration: none;
+								font-size: 1em;
+								color: $white;
+								
+								padding: {
+										left: 1em;
+										right: 1em;
+								}
+
+								&:hover {
+										text-decoration: underline;
+								}
+
+								&:focus {
+										text-transform: underline;
+								}
+						}
+				}
+		}
+
+		p {
+				float: right;
+				
+				margin: 0;
+				padding: {
+						top: 0.5em;
+						bottom: 0.5em;
+						right: 1em;
+						left: 1em;
+				}
+		}
+
+		@include all_round(0.5em);
+}
+
+#header_inner, #footer_inner {
+		overflow: auto;
+}
+
+#header_inner {
+
+		#logo {
+				padding: {
+						top: 1em;
+				}
+		}
+
+		#search_container {
+				background: $red;
+
+				padding: {
+						top: 0.5em;
+						left: 0.5em;
+						right: 0.5em;
+						bottom: 1em;
+				}
+
+				@include rounded(bottom, left);
+				@include rounded(bottom, right);
+
+		}
+
+		td {
+				vertical-align: bottom;
+
+				.contact {
+						padding: {
+								right: 2em;
+						}
+				}
+
+				#social_network_icons {
+						padding: {
+								top: 1em;
+						}
+
+						img {
+								display:block;
+						}
+				}
+		}
+}
+
+#footer_inner {
+
+		display: block;
+
+		nav {
+				float: right;
+				text-align: center;
+
+				p {
+						float: left;
+				}
+		}
+
+		ul {
+				padding: {
+						left: 0;
+						right: 3em;
+				}
+
+				li {
+						float: right;
+				}
+
+				.first {
+						@include border_on(right, none);
+						@include border_on(left, solid, 0.2em, $white); 
+				}
+
+				.last {
+							padding: {
+									right: 1em;
+							}
+				}
+		}
+
+		table {
+				width: 100%;
+		}
+
+		td {
+				padding: {
+						bottom: 1em;
+				}
+
+				vertical-align: top;
+
+				#social_network_icons {
+						float: right;
+				}
+		}
+}
+

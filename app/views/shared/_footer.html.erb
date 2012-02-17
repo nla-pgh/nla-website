@@ -1,19 +1,25 @@
 <section id='footer_inner' class="centered">
 
+<%= render(:partial => "/shared/menu", :locals => {
+						:dom_id => 'menu',
+						:css => 'menu'
+}) %>
 
-<% copywriting_options( scope: 'footer', phrase_type: 'wysiwyg', default: 'Multiline Footer Fields') do %>
+<table>
+		<tr>
+				<td>
+						<%= render partial: '/shared/contact_info/' %>
+				</td>
 
-		<span id='address'>
-				<%= raw copywriting('address') %>
-		</span>
-	
-		<span id='contact'>
-				<%= raw copywriting('contact information') %>
-		</span>
-<% end %>
-
-<%= render partial: '/shared/social_network_icons' %>
-
+				<td>
+					<%= render partial: '/shared/social_network_icons' %>
+				</td>
+		</tr>
+		<tr>
+				<td>
 <%= translate(".copyright", :year => Time.now.year,
-		:site_name => RefinerySetting.find_or_set(:site_name, "Neighborhood Learning Alliance")) %>
+		:site_name => RefinerySetting.find_or_set(:site_name, "Neighborhood Learning Alliance"))%>
+</td>
+</tr>
+</table>
 </section>
