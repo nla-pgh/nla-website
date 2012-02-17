@@ -1,8 +1,16 @@
-<section id='search_container'>
-<%= form_tag search_url, id: 'search', :class => 'align_right' do -%>
+<table id='search_container'>
+		<tr>
+				<%= form_tag search_url, id: 'search', :class => 'right' do -%>
+						<td id='search_box'>
+								<span>
 		<%= text_field_tag :query, {}, {:type => "search",
 												:placeholder => "Search site for ...",
 												:value => (params[:query] if params[:query])} %>
-		<%= submit_tag 'Go' %>
+								</span></td>
+								<td id='search_button'>
+										<span>
+												<%= submit_tag 'Go', :class => 'button'%>
+								</span></td>
 <% end %>
-</section>
+</tr>
+</table>

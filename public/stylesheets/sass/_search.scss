@@ -1,0 +1,43 @@
+#search_container {
+		background: $red;
+
+		width: 100%;
+
+		padding: {
+				top: 0.5em;
+				bottom: 1em;
+		}
+
+		@include rounded(bottom, left);
+		@include rounded(bottom, right);
+
+		tr {
+				td {
+
+						border-spacing: 0;
+
+						padding: 0;
+						vertical-align: top;
+				}
+
+				#search_box {
+						@include all_border(inset);
+						@include all_round(0.25em);
+						
+						background: #ffffff;
+						text-align: center;
+
+						input {
+								-webkit-appearance: none;
+								margin: 0;
+								padding: 0;
+								border: none;
+						}
+				}
+
+				#search_button {
+						@include all_round(0.25);
+				}
+		}	
+}
+

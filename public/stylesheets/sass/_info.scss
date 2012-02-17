@@ -1,0 +1,44 @@
+#info_container {
+		width: 100%;
+		
+		#social_network_feed {
+				width: 25%;
+				height: 100%;
+
+				&> div {
+						margin: {
+								left: 1.5em;
+						}
+
+						@include all_border(solid);
+						@include all_round();
+				}
+
+				.twtr-doc {
+						@include all_round(0);
+				}
+
+				.twtr-bd {
+						@include border_on(left, solid, thick);
+						@include border_on(right, solid, thick);
+				}
+		}
+
+		#news_container {
+				width: 74%;
+				height: 100%;
+
+				background: #ffffff;
+
+				.news_item {
+						@include border_on(bottom, groove, medium, $white);
+				}	
+
+				#last {
+						@include border_on(bottom, none);
+				}
+
+				@include all_round();
+				@include all_border(inset, medium, $white);
+		}
+}

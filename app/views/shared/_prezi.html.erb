@@ -1,0 +1,10 @@
+<section id="prezi-player" class='left'>
+
+<% width="width=100%"; height="height=100%" %>
+<object id='prezi'>
+		<%=raw /<param.*<\/embed>/.match(
+				copywriting('Front Page Presentation', scope: 'body', phrase_type: 'text', 
+										default: '<p>Insert presentation material here. DO NOT LEAVE BLANK!</p>'))[0]. \
+										gsub(/width="\d*"/, width).gsub(/height="\d*"/, height) %>
+</object>
+</section>

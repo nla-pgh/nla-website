@@ -8,11 +8,18 @@
 		border-color: $color;
 }
 
+@mixin all_border($style, $width: thick, $color: $red) {
+		@include border_on(top, $style, $width, $color);
+		@include border_on(left, $style, $width, $color);
+		@include border_on(right, $style, $width, $color);
+		@include border_on(bottom, $style, $width, $color);
+}
+
 @mixin rounded($horiz, $vert, $radius: 1em) {
 		border-#{$horiz}-#{$vert}-radius: $radius;
 }
 
-@mixin all_round($radius: 1em) {
+@mixin all_round($radius: 0.5em) {
 		@include rounded(top, left, $radius);
 		@include rounded(top, right, $radius);
 		@include rounded(bottom, left, $radius);
@@ -37,11 +44,12 @@ body {
 		font-size: medium;
 		margin: 0;
 		
+		overflow: auto;	
 }
 
 .centered {
-		min-width: 60%;
-		max-width: 75%;
+		min-width: 60em;
+		max-width: 65%;
 		margin: auto;
 }
 
@@ -77,86 +85,13 @@ body {
 		}
 }
 
-nav {
-		width: 100%;
-		float: left;
-
-		margin: {
-				top: 1em;
-				bottom: 1em;
-		}
-
-		ul {
-				padding: {
-						left: 3em;
-				}
-
-				margin: 0;
-				
-				.first {
-						@include border_on(left, none);
-				}
-
-				.last {
-							padding: {
-									right: 1em;
-							}
-				}
-		
-				li {
-						list-style: none;
-						float: left;
-						
-						padding: {
-								top: 0.5em;
-								bottom: 0.5em;
-								left: 1em;
-								right: 1em;
-						}
-
-						@include border_on(left, solid, 0.2em, $white);
-
-						a {
-								text-decoration: none;
-								font-size: 1em;
-								color: $white;
-								
-								padding: {
-										left: 1em;
-										right: 1em;
-								}
-
-								&:hover {
-										text-decoration: underline;
-								}
-
-								&:focus {
-										text-transform: underline;
-								}
-						}
-				}
-		}
-
-		p {
-				float: right;
-				
-				margin: 0;
-				padding: {
-						top: 0.5em;
-						bottom: 0.5em;
-						right: 1em;
-						left: 1em;
-				}
-		}
-
-		@include all_round(0.5em);
-}
-
-#header_inner, #footer_inner {
+section {
 		overflow: auto;
 }
 
-#header_inner {
+@import 'nav';
+
+#header {
 
 		#logo {
 				padding: {
@@ -164,21 +99,8 @@ nav {
 				}
 		}
 
-		#search_container {
-				background: $red;
-
-				padding: {
-						top: 0.5em;
-						left: 0.5em;
-						right: 0.5em;
-						bottom: 1em;
-				}
-
-				@include rounded(bottom, left);
-				@include rounded(bottom, right);
-
-		}
-
+		@import 'search';
+		
 		td {
 				vertical-align: bottom;
 
@@ -200,7 +122,29 @@ nav {
 		}
 }
 
-#footer_inner {
+#body {
+		&> section {
+				margin: {
+						top: 1em;
+						bottom: 1em;
+				}
+		}
+		#hero_container {
+				height: 25em;
+				@import 'prezi';
+		}
+
+		margin: {
+				top: 0;
+				bottom: 0;
+		}
+
+		@import 'take_action';
+		@import 'info';
+}
+
+
+#footer {
 
 		display: block;
 
@@ -210,6 +154,11 @@ nav {
 
 				p {
 						float: left;
+				}
+
+				margin: {
+						top: 0;
+						bottom: 1em;
 				}
 		}
 

@@ -1,5 +1,15 @@
-<% latest_news(count: 3).each do |item| %>
-		<section id='news_item'>
+<section id='news_container' class='left'>
+<% count = 0; max = 2 %>
+<% latest_news(count: max).each do |item| %>
+		<section class='news_item'
+		<% if 0 == count then %>
+				id='first'
+		<% elsif max - 1 == count %>
+				id='last'
+		<% end %>
+		>
 		<%= render partial: "/shared/news_item.html.erb", locals: {item: item} %>
 		</section>
+		<% count += 1 %>
 <% end %>
+</section>

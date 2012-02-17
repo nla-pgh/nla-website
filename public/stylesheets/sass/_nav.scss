@@ -1,0 +1,74 @@
+nav {
+		width: 100%;
+		float: left;
+
+		margin: {
+				top: 1em;
+		}
+
+		ul {
+				padding: {
+						left: 3em;
+				}
+
+				margin: 0;
+				
+				.first {
+						@include border_on(left, none);
+				}
+
+				.last {
+							padding: {
+									right: 1em;
+							}
+				}
+		
+				li {
+						list-style: none;
+						float: left;
+						
+						padding: {
+								top: 0.5em;
+								bottom: 0.5em;
+								left: 1em;
+								right: 1em;
+						}
+
+						@include border_on(left, solid, 0.2em, $white);
+
+						a {
+								text-decoration: none;
+								font-size: 1em;
+								color: $white;
+								
+								padding: {
+										left: 1em;
+										right: 1em;
+								}
+
+								&:hover {
+										text-decoration: underline;
+								}
+
+								&:focus {
+										text-transform: underline;
+								}
+						}
+				}
+		}
+
+		p {
+				float: right;
+				
+				margin: 0;
+				padding: {
+						top: 0.5em;
+						bottom: 0.5em;
+						right: 1em;
+						left: 1em;
+				}
+		}
+
+		@include all_round();
+}
+

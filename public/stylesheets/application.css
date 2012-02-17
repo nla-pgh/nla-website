@@ -8,11 +8,12 @@ body {
   color: #282828;
   text-align: left;
   font-size: medium;
-  margin: 0; }
+  margin: 0;
+  overflow: auto; }
 
 .centered {
-  min-width: 60%;
-  max-width: 75%;
+  min-width: 60em;
+  max-width: 65%;
   margin: auto; }
 
 .left {
@@ -37,11 +38,13 @@ body {
 .address p, .contact p {
   margin: 0; }
 
+section {
+  overflow: auto; }
+
 nav {
   width: 100%;
   float: left;
   margin-top: 1em;
-  margin-bottom: 1em;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
@@ -83,53 +86,194 @@ nav {
     padding-right: 1em;
     padding-left: 1em; }
 
-#header_inner, #footer_inner {
-  overflow: auto; }
-
-#header_inner #logo {
+#header #logo {
   padding-top: 1em; }
-#header_inner #search_container {
+#header #search_container {
   background: #af0a0a;
+  width: 100%;
   padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
   padding-bottom: 1em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em; }
-#header_inner td {
+  #header #search_container tr td {
+    border-spacing: 0;
+    padding: 0;
+    vertical-align: top; }
+  #header #search_container tr #search_box {
+    border-top: inset;
+    border-width: thick;
+    border-color: #af0a0a;
+    border-left: inset;
+    border-width: thick;
+    border-color: #af0a0a;
+    border-right: inset;
+    border-width: thick;
+    border-color: #af0a0a;
+    border-bottom: inset;
+    border-width: thick;
+    border-color: #af0a0a;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    background: #ffffff;
+    text-align: center; }
+    #header #search_container tr #search_box input {
+      -webkit-appearance: none;
+      margin: 0;
+      padding: 0;
+      border: none; }
+  #header #search_container tr #search_button {
+    border-top-left-radius: 0.25;
+    border-top-right-radius: 0.25;
+    border-bottom-left-radius: 0.25;
+    border-bottom-right-radius: 0.25; }
+#header td {
   vertical-align: bottom; }
-  #header_inner td .contact {
+  #header td .contact {
     padding-right: 2em; }
-  #header_inner td #social_network_icons {
+  #header td #social_network_icons {
     padding-top: 1em; }
-    #header_inner td #social_network_icons img {
+    #header td #social_network_icons img {
       display: block; }
 
-#footer_inner {
+#body {
+  margin-top: 0;
+  margin-bottom: 0; }
+  #body > section {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  #body #hero_container {
+    height: 25em; }
+    #body #hero_container #prezi-player {
+      width: 75%;
+      height: 100%; }
+    #body #hero_container #prezi {
+      width: 100%;
+      height: 100%; }
+  #body #take_action {
+    text-align: center;
+    height: 100%;
+    width: 25%; }
+    #body #take_action td {
+      height: 33%; }
+      #body #take_action td section {
+        border-top: outset;
+        border-width: 0.5em;
+        border-color: #af0a0a;
+        border-left: outset;
+        border-width: 0.5em;
+        border-color: #af0a0a;
+        border-right: outset;
+        border-width: 0.5em;
+        border-color: #af0a0a;
+        border-bottom: outset;
+        border-width: 0.5em;
+        border-color: #af0a0a;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        margin-left: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        background: #af0a0a; }
+        #body #take_action td section a {
+          text-decoration: none;
+          font-size: 1.5em;
+          font-weight: bold;
+          color: #fffff0; }
+  #body #info_container {
+    width: 100%; }
+    #body #info_container #social_network_feed {
+      width: 25%;
+      height: 100%; }
+      #body #info_container #social_network_feed > div {
+        margin-left: 1.5em;
+        border-top: solid;
+        border-width: thick;
+        border-color: #af0a0a;
+        border-left: solid;
+        border-width: thick;
+        border-color: #af0a0a;
+        border-right: solid;
+        border-width: thick;
+        border-color: #af0a0a;
+        border-bottom: solid;
+        border-width: thick;
+        border-color: #af0a0a;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em; }
+      #body #info_container #social_network_feed .twtr-doc {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; }
+      #body #info_container #social_network_feed .twtr-bd {
+        border-left: solid;
+        border-width: thick;
+        border-color: #af0a0a;
+        border-right: solid;
+        border-width: thick;
+        border-color: #af0a0a; }
+    #body #info_container #news_container {
+      width: 74%;
+      height: 100%;
+      background: #ffffff;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      border-top: inset;
+      border-width: medium;
+      border-color: #fffff0;
+      border-left: inset;
+      border-width: medium;
+      border-color: #fffff0;
+      border-right: inset;
+      border-width: medium;
+      border-color: #fffff0;
+      border-bottom: inset;
+      border-width: medium;
+      border-color: #fffff0; }
+      #body #info_container #news_container .news_item {
+        border-bottom: groove;
+        border-width: medium;
+        border-color: #fffff0; }
+      #body #info_container #news_container #last {
+        border-bottom: none;
+        border-width: thick;
+        border-color: #af0a0a; }
+
+#footer {
   display: block; }
-  #footer_inner nav {
+  #footer nav {
     float: right;
-    text-align: center; }
-    #footer_inner nav p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em; }
+    #footer nav p {
       float: left; }
-  #footer_inner ul {
+  #footer ul {
     padding-left: 0;
     padding-right: 3em; }
-    #footer_inner ul li {
+    #footer ul li {
       float: right; }
-    #footer_inner ul .first {
+    #footer ul .first {
       border-right: none;
       border-width: thick;
       border-color: #af0a0a;
       border-left: solid;
       border-width: 0.2em;
       border-color: #fffff0; }
-    #footer_inner ul .last {
+    #footer ul .last {
       padding-right: 1em; }
-  #footer_inner table {
+  #footer table {
     width: 100%; }
-  #footer_inner td {
+  #footer td {
     padding-bottom: 1em;
     vertical-align: top; }
-    #footer_inner td #social_network_icons {
+    #footer td #social_network_icons {
       float: right; }

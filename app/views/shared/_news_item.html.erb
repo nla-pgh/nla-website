@@ -1,12 +1,12 @@
-<h3 id='news_title'>
+<h3 class='news_title'>
 		<%= item.title.titleize %>
 </h3>
-<div id="news_body">
-<section id='time_posted'>
+<section class="news_body">
+<section class='time_posted'>
 <small> Posted: <%= distance_of_time_in_words_to_now(item.publish_date) %> ago </small>
 </section>
 <section id='news_link'>
-<%= truncate(item.body, length: 250).html_safe %>
 <p> <%= link_to "Read full article", item %> </p>
+<%= raw truncate(item.body.dup, length: 250).gsub(/<[^p]*\.\.\./, "...") %>
 </section>
-</div>
+</section>
