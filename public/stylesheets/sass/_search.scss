@@ -6,7 +6,11 @@
 		padding: {
 				top: 0.5em;
 				bottom: 1em;
+				left: 1em;
+				right: 1em;
 		}
+
+		margin: 0;
 
 		@include rounded(bottom, left);
 		@include rounded(bottom, right);

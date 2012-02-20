@@ -48,8 +48,8 @@ body {
 }
 
 .centered {
-		min-width: 60em;
-		max-width: 65%;
+		min-width: 25em;
+		max-width: 60em;
 		margin: auto;
 }
 
@@ -87,6 +87,7 @@ body {
 
 section {
 		overflow: auto;
+		background: transparent;
 }
 
 @import 'nav';
