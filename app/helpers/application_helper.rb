@@ -7,19 +7,19 @@ module ApplicationHelper
 		# Creating Logos, Icons, and other Image
 
 		def logo
-				image_tag("NLA_logo_words.svg", alt: "Neighborhood Learning Alliance Logo", id: 'logo', size: "500x200")
+				image_tag("NLA_logo_words_resize_2.svg", alt: "Neighborhood Learning Alliance Logo", id: 'logo')
 		end
 
 		def twitter
-				image_tag("sn_icons/twitter.png", alt: "Follow us on Twitter!", size: "50x50")
+				image_tag("sn_icons/twitter.png", alt: "Follow us on Twitter!", class: 'icon')
 		end
 
 		def facebook
-				image_tag("sn_icons/fb.png", alt: "Like us on Facebook!", size: "50x50")
+				image_tag("sn_icons/fb.png", alt: "Like us on Facebook!", class: 'icon')
 		end
 
 		def google_plus
-				image_tag("sn_icons/gplus.png", alt: "+1 us on Google Plus!", size: "50x50")
+				image_tag("sn_icons/gplus.png", alt: "+1 us on Google Plus!", class: 'icon')
 		end
 
 end

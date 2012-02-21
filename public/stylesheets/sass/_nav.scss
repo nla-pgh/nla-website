@@ -1,15 +1,7 @@
 nav {
-		width: 100%;
 		float: left;
 
-		margin: {
-				top: 1em;
-		}
-
 		ul {
-				padding: {
-						left: 3em;
-				}
 
 				margin: 0;
 				
@@ -68,7 +60,5 @@ nav {
 						left: 1em;
 				}
 		}
-
-		@include all_round();
 }
 

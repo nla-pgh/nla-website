@@ -1,16 +1,6 @@
-<table id='search_container'>
-		<tr>
-				<%= form_tag search_url, id: 'search', :class => 'right' do -%>
-						<td id='search_box'>
-								<span>
+<%= form_tag search_url, id: 'search' do -%>
 		<%= text_field_tag :query, {}, {:type => "search",
 												:placeholder => "Search site for ...",
 												:value => (params[:query] if params[:query])} %>
-								</span></td>
-								<td id='search_button'>
-										<span>
 												<%= submit_tag 'Go', :class => 'button'%>
-								</span></td>
-<% end %>
-</tr>
-</table>
+											<% end %>
