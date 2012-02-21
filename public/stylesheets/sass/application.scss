@@ -53,8 +53,8 @@ body {
 }
 
 .icon {
-	height: 3em;
-	width: 3em;
+	height: 2em;
+	width: 2em;
 }
 
 .inline {
@@ -109,7 +109,7 @@ section {
 
 
 #header {
-	background: #DEDEDE;
+	background: #E6E6E6;
 	width: 100%;
 
 	.right {
@@ -121,6 +121,18 @@ section {
 	@import 'social';
 }
 
+
+#container_hero {
+	background: #808080;
+	width: 100%;
+	height: 20em;
+	@import 'hero';
+}
+
+#nav_strip {
+	width: 100%;
+	background: $red;
+}
 
 #body {
 		&> section {
@@ -149,11 +161,9 @@ section {
 		display: block;
 
 		nav {
-				float: right;
 				text-align: center;
 
 				p {
-						float: left;
 				}
 
 				margin: {
@@ -169,7 +179,6 @@ section {
 				}
 
 				li {
-						float: right;
 				}
 
 				.first {
@@ -196,7 +205,6 @@ section {
 				vertical-align: top;
 
 				#social_network_icons {
-						float: right;
 				}
 		}
 }
