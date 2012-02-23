@@ -1,6 +1,19 @@
 #hero {
+	@import 'prezi';
 
-	#prezi-player {
+	#message {
+		margin: 0;
+		padding: {
+			top: 0.25em;
+		}
+
+		font-weight: bold;
 		display: inline-block;
+
+		position: absolute;
+		right: 0;
+
+		font-size: 4em;
+		color: $white;
 	}
 }

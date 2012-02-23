@@ -1,59 +1,64 @@
 nav {
-		ul {
 
-				margin: 0;
-				
-				.first {
-						@include border_on(left, none);
-				}
+	$padding: 0.25em;
 
-				.last {
-							padding: {
-									right: 1em;
-							}
-				}
-		
-				li {
-						list-style: none;
-						
-						padding: {
-								top: 0.5em;
-								bottom: 0.5em;
-								left: 1em;
-								right: 1em;
-						}
+	position: relative;
 
-						@include border_on(left, solid, 0.2em, $white);
+	padding: {
+		top: $padding;
+		bottom: $padding;
+	}
 
-						a {
-								text-decoration: none;
-								font-size: 1em;
-								color: $white;
-								
-								padding: {
-										left: 1em;
-										right: 1em;
-								}
+	ul {
+		display: inline-block;
+		list-style-type: none;
 
-								&:hover {
-										text-decoration: underline;
-								}
-
-								&:focus {
-										text-transform: underline;
-								}
-						}
-				}
+		padding: {
+			top: $padding;
+			bottom: $padding;
+			left: 0;
+			right: 0;
 		}
 
-		p {
+		margin: 0;
+
+		li {
+			display: inline;
+			margin: 0;
+
+			padding: {
+				top: $padding * 2;
+				bottom: $padding * 2;
+				left: $padding * 2;
+				right: $padding * 2;
+			}
+
+			&:hover {
+				background: #700000;
+			}
+
+			a {
+				display: inline-block;
+				color: $white;
+				text-decoration: none;
+
+				padding: 0;
 				margin: 0;
-				padding: {
-						top: 0.5em;
-						bottom: 0.5em;
-						right: 1em;
-						left: 1em;
-				}
+			}
 		}
+	}
+
+
+	p {
+		color: $white;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+
+		position: absolute;
+		top: $padding * 2;
+		right: 0em;
+	}
+
 }
 

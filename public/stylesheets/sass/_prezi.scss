@@ -1,8 +1,13 @@
 #prezi-player {
-	height: 10em;
-}
+	display: inline-block;
+	@include all_round(0.25em);
+	@include all_border(outset, 0.5em, white);
 
-#prezi {
-		width: 20em;
-		height: 10em;
+	width: $page_min_width * 0.75;
+	height: 20em;
+
+	#prezi {
+		width: $page_min_width * 0.75;
+		height: 20em;
+	}
 }

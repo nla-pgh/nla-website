@@ -1,7 +1,6 @@
-#container_social_network_icons {
-	display: block;
-
-	float: right;
+.container_social_network_icons {
+	position: absolute;
+	right: 0;
 
 	a img {
 		display: block;

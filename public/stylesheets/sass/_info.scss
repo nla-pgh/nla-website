@@ -1,5 +1,6 @@
 #info_container {
-		width: 100%;
+
+	$padding: 0.25em;
 		
 		#social_network_feed {
 				width: 25%;
@@ -25,20 +26,35 @@
 		}
 
 		#news_container {
-				width: 74%;
-				height: 100%;
 
-				background: #ffffff;
+			#news {
+				margin: 0;
+				padding: 0;
+			}
 
-				.news_item {
-						@include border_on(bottom, groove, medium, $white);
-				}	
+			width: 65%;
 
-				#last {
-						@include border_on(bottom, none);
+			.news_title {
+				@include border_on(top, dotted, thin, $grey);
+				@include border_on(bottom, dotted, thin, $grey);
+				color: $red;
+				padding: {
+					top: $padding;
+					bottom: $padding;
+					left: $padding * 2;
 				}
+			}
 
-				@include all_round();
-				@include all_border(inset, medium, $white);
+			.news_body {
+				padding: {
+					left: $padding * 2;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				color: $red;
+				font-size: 0.80em;
+			}
 		}
 }

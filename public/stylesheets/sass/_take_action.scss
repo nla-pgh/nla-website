@@ -1,37 +1,13 @@
-#take_action {
-		text-align: center;
-		height: 100%;
-		width: 25%;
+#container_take_action {
+	position: fixed;
+	top: 10em;
+	right: 1em; 
 
-		td {
-				height: 33%;
-				
-				
-				section {
-						@include all_border(outset, 0.5em);
-						@include all_round();
-						
-						margin: {
-								left: 1em;
-						}
+	@include all_border(solid, thick);
 
-						padding: {
-								top: 2em;
-								bottom: 2em;
-						}
-
-						background: $red;
-
-						a {
-								text-decoration: none;
-								font: {
-										size: 1.5em;
-										weight: bold;
-								}
-
-								color: $white;
-						}
-
-				}
-		}
+	section {
+		background: $white;
+		width: 10em;
+		height: 5em;
+	}
 }

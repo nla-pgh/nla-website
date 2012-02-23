@@ -37,6 +37,7 @@ gem 'refinerycms',              '~> 1.0.9'
 
 gem 'sass'
 gem 'haml', '>=3.0.6'
+gem 'twitter'
 
 =begin #testing
 group :development, :test do

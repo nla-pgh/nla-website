@@ -1,25 +1,11 @@
 <section id='footer'>
+	<section class='centered'>
+		<%= render partial: '/shared/contact_info/' %>
+		<%= render partial: '/shared/social_network_icons' %>
 
-<%= render(:partial => "/shared/menu", :locals => {
-						:dom_id => 'menu',
-						:css => 'menu'
-}) %>
-
-<table>
-		<tr>
-				<td>
-						<%= render partial: '/shared/contact_info/' %>
-				</td>
-
-				<td>
-					<%= render partial: '/shared/social_network_icons' %>
-				</td>
-		</tr>
-		<tr>
-				<td>
-<%= translate(".copyright", :year => Time.now.year,
-		:site_name => RefinerySetting.find_or_set(:site_name, "Neighborhood Learning Alliance"))%>
-</td>
-</tr>
-</table>
+		<p id='copyright'>
+			<%= translate(".copyright", :year => Time.now.year,
+				:site_name => RefinerySetting.find_or_set(:site_name, "Neighborhood Learning Alliance"))%>
+		</p>		
+	</section>
 </section>
