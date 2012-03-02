@@ -103,15 +103,34 @@ section {
 
 	.right {
 		display: block;
+		position: relative;
 	}
 
 	@import 'logo';
 	@import 'search';
-	@import 'social';
+
+	.info {
+		position: relative;
+		.contact {
+			display: inline-block;
+			position: relative;
+			left: 0;
+
+			p {
+				padding: 0;
+				margin: 0;
+			}
+
+			padding: {
+				top: 2em;
+			}
+		}
+		@import 'social';
+	}
 }
 
 #body {
-	width: $page_min_width + 20em;
+	width: 100%;
 	margin: auto;
 	position: relative;
 	
@@ -152,12 +171,18 @@ section {
 
 	.contact {
 		display: inline-block;
+		position: relative;
+
+		p {
+			padding: 0;
+			margin: 0;
+		}
 	}
 
 	@import 'social';
 
 	.container_social_network_icons {
-		top: 0.5em;
+		top: 0;
 
 		a img {
 			display: inline-block;

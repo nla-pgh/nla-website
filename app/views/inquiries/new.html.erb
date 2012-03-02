@@ -1,5 +1,7 @@
+<section id="body">
+	<section class="centered">
 <% content_for :body_content_left do %>
-  <section class='inquiries'>
+  <div class='inquiries'>
     <%=raw @page[Page.default_parts.first.to_sym] %>
 
     <%= form_for @inquiry do |f| %>
@@ -8,27 +10,29 @@
                    :object => @inquiry,
                    :include_object_name => true
                  } %>
-      <section class='field'>
+      <div class='field'>
         <%= f.required_label :name %>
         <%= f.text_field :name %>
-      </section>
-      <section class='field'>
+      </div>
+      <div class='field'>
         <%= f.required_label :email %>
         <%= f.text_field :email %>
-      </section>
-      <section class='field'>
+      </div>
+      <div class='field'>
         <%= f.label :phone %>
         <%= f.text_field :phone %>
-      </section>
-      <section class='field message_field'>
+      </div>
+      <div class='field message_field'>
         <%= f.required_label :message  %>
         <%= f.text_area :message, :rows => 8 %>
-      </section>
-      <section class='actions'>
+      </div>
+      <div class='actions'>
         <%= f.submit t('.send') %>
         <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if RefinerySetting.find_or_set(:show_contact_privacy_link, false) %>
-      </section>
+      </div>
     <% end %>
-  </section>
+  </div>
 <% end %>
 <%= render :partial => "/shared/content_page" %>
+</section>
+</section>

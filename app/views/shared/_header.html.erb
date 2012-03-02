@@ -3,7 +3,10 @@
 		<%= link_to(logo, root_path, id: 'logo') %>
 		<section class='right'>
 			<%= render partial: '/shared/search' %>
-			<%= render partial: '/shared/social_network_icons' %>
+			<section class='info'>
+				<%= render partial: '/shared/contact_info/' %>
+				<%= render partial: '/shared/social_network_icons' %>
+			</section>
 		</section>
 	</section>
 </section>

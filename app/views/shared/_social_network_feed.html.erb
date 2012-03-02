@@ -1,3 +1,5 @@
 <section id='social_network_feed'>
-<%= raw copywriting('Social network feed', { :scope => 'body', :phrase_type => 'text' }) %>
+	<h3 id="twitter" >Recent Tweet</h3>
+	<% account = "NLA_Pittsburgh"; timeline = Twitter.user_timeline(account, include_entities: true) %>
+	<%=raw timeline.first.oembed.html %>
 </section>

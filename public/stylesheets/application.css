@@ -90,7 +90,8 @@ nav {
 #header {
   width: 100%; }
   #header .right {
-    display: block; }
+    display: block;
+    position: relative; }
   #header #logo {
     padding-top: 0.25em;
     padding-bottom: 0.25em; }
@@ -124,67 +125,66 @@ nav {
     border-top-right-radius: 0; }
     #header #search #query {
       width: 15em; }
-  #header .container_social_network_icons {
-    position: absolute;
-    right: 0; }
-    #header .container_social_network_icons a img {
-      display: block; }
+  #header .info {
+    position: relative; }
+    #header .info .contact {
+      display: inline-block;
+      position: relative;
+      left: 0;
+      padding-top: 2em; }
+      #header .info .contact p {
+        padding: 0;
+        margin: 0; }
+    #header .info .container_social_network_icons {
+      display: inline-block;
+      position: absolute;
+      right: 0; }
+      #header .info .container_social_network_icons a img {
+        display: block; }
 
 #body {
-  width: 80em;
+  width: 100%;
   margin: auto;
   position: relative;
   padding-top: 1em;
   padding-bottom: 1em; }
-  #body #info_container #social_network_feed {
-    width: 25%;
-    height: 100%; }
-    #body #info_container #social_network_feed > div {
-      margin-left: 1.5em;
-      border-top: solid;
-      border-width: thick;
-      border-color: #af0a0a;
-      border-left: solid;
-      border-width: thick;
-      border-color: #af0a0a;
-      border-right: solid;
-      border-width: thick;
-      border-color: #af0a0a;
-      border-bottom: solid;
-      border-width: thick;
-      border-color: #af0a0a;
-      border-top-left-radius: 0.5em;
-      border-top-right-radius: 0.5em;
-      border-bottom-left-radius: 0.5em;
-      border-bottom-right-radius: 0.5em; }
-    #body #info_container #social_network_feed .twtr-doc {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0; }
-    #body #info_container #social_network_feed .twtr-bd {
-      border-left: solid;
-      border-width: thick;
-      border-color: #af0a0a;
-      border-right: solid;
-      border-width: thick;
-      border-color: #af0a0a; }
+  #body #info_container .item_title {
+    border-top: dotted;
+    border-width: thin;
+    border-color: #282828;
+    border-bottom: dotted;
+    border-width: thin;
+    border-color: #282828;
+    color: #af0a0a;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em; }
+  #body #info_container .side_body {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    padding-right: 1em; }
+    #body #info_container .side_body #social_network_feed {
+      width: 20em; }
+      #body #info_container .side_body #social_network_feed h3 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 12px; }
+      #body #info_container .side_body #social_network_feed div {
+        padding-left: 0.5em; }
   #body #info_container #news_container {
-    width: 65%; }
+    display: inline-block;
+    border-right: dashed;
+    border-width: thin;
+    border-color: #af0a0a;
+    padding-right: 2em;
+    width: 35em; }
     #body #info_container #news_container #news {
       margin: 0;
       padding: 0; }
-    #body #info_container #news_container .news_title {
-      border-top: dotted;
-      border-width: thin;
-      border-color: #282828;
-      border-bottom: dotted;
-      border-width: thin;
-      border-color: #282828;
-      color: #af0a0a;
-      padding-top: 0.25em;
-      padding-bottom: 0.25em;
-      padding-left: 0.5em; }
     #body #info_container #news_container .news_body {
       padding-left: 0.5em; }
     #body #info_container #news_container a {
@@ -258,14 +258,19 @@ nav {
   padding-top: 0.5em;
   color: #282828; }
   #footer .contact {
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
+    #footer .contact p {
+      padding: 0;
+      margin: 0; }
   #footer .container_social_network_icons {
+    display: inline-block;
     position: absolute;
     right: 0; }
     #footer .container_social_network_icons a img {
       display: block; }
   #footer .container_social_network_icons {
-    top: 0.5em; }
+    top: 0; }
     #footer .container_social_network_icons a img {
       display: inline-block; }
   #footer #copyright {
