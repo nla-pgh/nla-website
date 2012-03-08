@@ -1,53 +1,9 @@
 nav {
-
 	$padding: 0.25em;
 
 	position: relative;
-
-	padding: {
-		top: $padding;
-		bottom: $padding;
-	}
-
-	ul {
-		display: inline-block;
-		list-style-type: none;
-
-		padding: {
-			top: $padding;
-			bottom: $padding;
-			left: 0;
-			right: 0;
-		}
-
-		margin: 0;
-
-		li {
-			display: inline;
-			margin: 0;
-
-			padding: {
-				top: $padding * 2;
-				bottom: $padding * 2;
-				left: $padding * 2;
-				right: $padding * 2;
-			}
-
-			&:hover {
-				background: #700000;
-			}
-
-			a {
-				display: inline-block;
-				color: $white;
-				text-decoration: none;
-
-				padding: 0;
-				margin: 0;
-			}
-		}
-	}
-
+	padding: 0;
+	margin: 0;
 
 	p {
 		color: $white;
@@ -60,5 +16,64 @@ nav {
 		right: 0em;
 	}
 
-}
+	ul {
+		display: inline-block;
+		list-style-type: none;
 
+		padding: 0;
+		margin: 0;
+
+		background: $red;
+
+		li {
+			display: inline-block;
+			position: relative;
+			
+			top: 0;
+
+			padding: {
+				top: $padding * 2;
+				bottom: $padding * 2;
+				left: $padding *  2;
+				right: $padding * 2;
+			}
+
+			margin: 0;
+
+			&:hover {
+				background: #700000;
+
+				ul {
+					display: block;
+					position: absolute;
+
+					li {
+						display: inline-block;
+						position: relative;
+					}
+				}
+			}
+
+			ul {
+				display: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+
+	}
+
+	a {
+		display: inline-block;
+		color: $white;
+		text-decoration: none;
+		
+		padding: 0;
+		margin: 0;
+	}
+}	

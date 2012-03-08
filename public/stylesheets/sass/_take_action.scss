@@ -1,13 +1,37 @@
 #container_take_action {
-	position: fixed;
-	top: 10em;
-	right: 1em; 
+	display: inline-block;
 
-	@include all_border(solid, thick);
+	position: absolute;
+	vertical-align: top;
+
+	right: 0;
 
 	section {
-		background: $white;
-		width: 10em;
+		@include all_border(outset, medium);
+		@include all_round();
+
+		background: $red;
+
+		margin: {
+			top: 1.25em;
+		}
+
+		width: 12em;
 		height: 5em;
+
+		a {
+			display: block;
+			margin: auto;
+
+			width: 4em;
+
+			color: $white;
+			text-decoration: none;
+
+			font: {
+				weight: bold;
+				size: xx-large;
+			}
+		}
 	}
 }

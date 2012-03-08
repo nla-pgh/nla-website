@@ -1,47 +1,17 @@
 @import 'branding';
 
-/** SASS Mixins **/
-
-@mixin border_on($side, $style, $width: thick, $color: $red) {
-		border-#{$side}: $style;
-		border-width: $width;
-		border-color: $color;
-}
-
-@mixin all_border($style, $width: thick, $color: $red) {
-		@include border_on(top, $style, $width, $color);
-		@include border_on(left, $style, $width, $color);
-		@include border_on(right, $style, $width, $color);
-		@include border_on(bottom, $style, $width, $color);
-}
-
-@mixin rounded($horiz, $vert, $radius: 1em) {
-		border-#{$horiz}-#{$vert}-radius: $radius;
-}
-
-@mixin all_round($radius: 0.5em) {
-		@include rounded(top, left, $radius);
-		@include rounded(top, right, $radius);
-		@include rounded(bottom, left, $radius);
-		@include rounded(bottom, right, $radius);
-}
-
-@mixin bg_image($url) {
-		background: {
-				position: top left;
-				repeat: repeat-x;
-				image: $url;
-		}
-}
-
 body {
-		color: $grey;
-		text-align: left;
-		font-size: medium;
-		margin: auto;
-		min-width: 60em;
-		max-width: 100%;
-		background: $white;
+	color: $grey;
+	text-align: left;
+	font-size: medium;
+	margin: auto;
+	min-width: 60em;
+	max-width: 100%;
+	background: $white;
+	position: relative;
+}
+
+#container_take_action {
 }
 
 #site_bar {
@@ -69,12 +39,8 @@ body {
 		position: relative;
 }
 
-.left {
-		float: left;
-}
-
-.right {
-		float: right;
+.nav_strip {
+	background: $red;
 }
 
 .standard {
@@ -91,12 +57,18 @@ body {
 		background: $grey;
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
 
 section {
 		background: transparent;
 }
 
-@import 'nav';
 
 #header {
 	width: 100%;
@@ -156,11 +128,7 @@ section {
 	@import 'hero';
 }
 
-.nav_strip {
-	background: $red;
-}
-
-
+@import 'nav';
 
 #footer {
 	padding: {

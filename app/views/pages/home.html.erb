@@ -1,11 +1,8 @@
-<%= render partial: '/shared/hero' %>
-<section id='body'>
-	<section id='info_container' class='centered'>
-		<%= render partial: "/shared/news" %>
-		<section class='side_body'>
-			<%= render partial: "/shared/social_network_feed" %>
-			<%= render partial: "/shared/documents" %>
-			<%= render partial: "/shared/partners" %>
-		</section>
-	</section>
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'home' %>
+<% end %>
+
+<section id='info_container' class='centered'>
+	<%= render partial: "/shared/news" %>
+	<%= render partial: '/shared/side_bar' %>
 </section>
