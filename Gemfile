@@ -1,11 +1,6 @@
 source 'http://rubygems.org'
 
-# gem 'rails', '3.0.11'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'pg'
+gem 'rails', '3.0.11'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -39,13 +34,12 @@ gem 'sass'
 gem 'haml', '>=3.0.6'
 gem 'twitter'
 
-=begin #testing
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
   # Then, run 'rails generate refinerycms_testing' which will copy its support files.
   # Finally, run 'rake' to run the tests.
   gem 'refinerycms-testing',    '~> 1.0.9'
-  gem 'capybara-webkit'
+  gem 'capybara'
 
   if RbConfig::CONFIG['target_os'] =~ /darwin/i
     gem 'growl'
@@ -55,9 +49,12 @@ group :development, :test do
   gem 'guard-spork', :platforms => :ruby
   gem 'guard-rspec', :platforms => :ruby
   gem 'generator_spec'
+	gem 'sqlite3'
 end
 
-=end #testing
+group :production do
+	gem 'pg'
+end
 
 # END REFINERY CMS ============================================================
 
