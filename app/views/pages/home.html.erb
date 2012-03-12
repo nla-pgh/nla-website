@@ -2,7 +2,7 @@
 	<%= stylesheet_link_tag 'home' %>
 <% end %>
 
-<section id='info_container' class='centered'>
-	<%= render partial: "/shared/news" %>
-	<%= render partial: '/shared/side_bar' %>
-</section>
+<% content_for :body_content_left, (render partial: "recent_news") %>
+<% content_for :body_content_right, (render partial: "/shared/side_bar/side_bar") %>
+
+<%= render partial: "/shared/content_page" %>

@@ -1,3 +1,7 @@
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'search' %>
+<% end %>
+
 <% content_for :body_content_title do %>
   Search Results for '<%=h params[:query] %>'
 <% end %>

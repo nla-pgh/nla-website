@@ -1,4 +1,26 @@
-#body_content_title {
-  margin: 0;
-  padding: 0;
-  font-size: 2em; }
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+/** SASS Mixins **/
+html {
+  font-family: 'Ubuntu', sans-serif; }
+
+#container_hero {
+  display: none; }
+
+.field {
+  border-bottom: dotted;
+  border-width: thin;
+  border-color: #af0a0a;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em; }
+  .field * {
+    display: inline-block;
+    vertical-align: top; }
+  .field label {
+    width: 10em; }
+
+.required {
+  color: #af0a0a; }
+
+.actions {
+  padding-top: 1em; }

@@ -1,0 +1,38 @@
+@import 'branding';
+
+#container_hero {
+	display: none;
+}
+
+.news_item_truncated {
+	position: relative;
+	a {
+		display: inline-block;
+		text-decoration: none;
+		color: $red;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		padding: {
+			left: 1em;
+		}
+	}
+}
+
+.read_more {
+	display: inline-block;
+	text-decoration: none;
+	color: $red;
+
+	padding: {
+		left: 1em;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

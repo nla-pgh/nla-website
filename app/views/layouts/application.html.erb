@@ -7,21 +7,21 @@
 		<%= site_bar -%>
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
-		<%= render :partial => "/shared/header" %>
-		<%= render partial: '/shared/nav' %>
+		<%= render :partial => "/shared/header/header" %>
+		<%= render partial: '/shared/nav/nav' %>
 
 		<section id='container_body'>
 
-			<%= render partial: '/shared/hero' %>
+			<%= render partial: '/shared/hero/hero' %>
 			<section id='body'>
 				<%= yield %>
 			</section>
 
 		</section>
 
-		<%= render partial: '/shared/nav' %>
+		<%= render partial: '/shared/nav/nav' %>
 
-		<%= render :partial => "/shared/footer" -%>
+		<%= render :partial => "/shared/footer/footer" -%>
     <%= render :partial => "/shared/javascripts" %>
   </body>
 </html>

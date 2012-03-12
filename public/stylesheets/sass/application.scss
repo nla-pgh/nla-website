@@ -11,15 +11,35 @@ body {
 	position: relative;
 }
 
-#container_take_action {
-}
+#body_content {
+	width: $page_min_width;
+	margin: auto;
+	position: relative;
 
-#site_bar {
-	width: 100%;
+	section {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+	}
 
-	#site_bar_content {
-		width: $page_min_width;
-		margin: auto;
+	#body_content_left {
+		width: 70%;
+	}
+
+	#body_content_right {
+		width: 20%;
+	}
+
+	&[class~="no_body_content_right"] {
+		#body_content_left {
+			width: 100%;
+		}
+	}
+
+	&[class~="no_body_content_left"] {
+		#body_content_right {
+			width: 100%;
+		}
 	}
 }
 
@@ -163,3 +183,8 @@ section {
 	}	
 }
 
+#body_content_title {
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+}

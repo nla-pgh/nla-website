@@ -13,11 +13,22 @@ body {
   background: white;
   position: relative; }
 
-#site_bar {
-  width: 100%; }
-  #site_bar #site_bar_content {
-    width: 60em;
-    margin: auto; }
+#body_content {
+  width: 60em;
+  margin: auto;
+  position: relative; }
+  #body_content section {
+    display: inline-block;
+    position: relative;
+    vertical-align: top; }
+  #body_content #body_content_left {
+    width: 70%; }
+  #body_content #body_content_right {
+    width: 20%; }
+  #body_content[class~="no_body_content_right"] #body_content_left {
+    width: 100%; }
+  #body_content[class~="no_body_content_left"] #body_content_right {
+    width: 100%; }
 
 .icon {
   height: 2em;
@@ -262,3 +273,8 @@ nav {
     margin: 0;
     padding-top: 1em;
     padding-bottom: 1em; }
+
+#body_content_title {
+  margin: 0;
+  padding: 0;
+  font-size: 2em; }

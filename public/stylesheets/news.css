@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+/** SASS Mixins **/
+html {
+  font-family: 'Ubuntu', sans-serif; }
+
+#container_hero {
+  display: none; }
+
+.news_item_truncated {
+  position: relative; }
+  .news_item_truncated a {
+    display: inline-block;
+    text-decoration: none;
+    color: #af0a0a; }
+    .news_item_truncated a:hover {
+      text-decoration: underline; }
+  .news_item_truncated p {
+    padding-left: 1em; }
+
+.read_more {
+  display: inline-block;
+  text-decoration: none;
+  color: #af0a0a;
+  padding-left: 1em; }
+  .read_more:hover {
+    text-decoration: underline; }
