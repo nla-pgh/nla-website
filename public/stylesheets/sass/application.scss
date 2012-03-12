@@ -1,56 +1,9 @@
 @import 'branding';
 
-body {
-	color: $grey;
-	text-align: left;
-	font-size: medium;
-	margin: auto;
-	min-width: 60em;
-	max-width: 100%;
-	background: $white;
-	position: relative;
-}
-
-#body_content {
-	width: $page_min_width;
-	margin: auto;
-	position: relative;
-
-	section {
-		display: inline-block;
-		position: relative;
-		vertical-align: top;
-	}
-
-	#body_content_left {
-		width: 70%;
-	}
-
-	#body_content_right {
-		width: 20%;
-	}
-
-	&[class~="no_body_content_right"] {
-		#body_content_left {
-			width: 100%;
-		}
-	}
-
-	&[class~="no_body_content_left"] {
-		#body_content_right {
-			width: 100%;
-		}
-	}
-}
-
+// High-level class definitions //
 .icon {
 	height: 2em;
 	width: 2em;
-}
-
-.inline {
-	display: inline-block;
-	vertical-align: top;
 }
 
 .centered {
@@ -59,22 +12,10 @@ body {
 		position: relative;
 }
 
-.nav_strip {
-	background: $red;
-}
-
-.standard {
-		background: $white;
-		color: $grey;
-}
-
-.invert {
-		background: $red;
-		color: $white;
-}
-
 .selected {
+	a {
 		background: $grey;
+	}
 }
 
 .left {
@@ -89,6 +30,75 @@ section {
 		background: transparent;
 }
 
+a {
+	color: $red;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+body {
+	color: $grey;
+	text-align: left;
+	font-size: medium;
+	margin: auto;
+	min-width: 60em;
+	max-width: 100%;
+	background: $white;
+	position: relative;
+}
+
+@import 'nav';
+
+#body_content {
+	width: $page_min_width;
+	margin: auto;
+	position: relative;
+
+	&>section {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		padding: 0;
+		margin: 0;
+	}
+
+	#body_content_left {
+		width: 70%;
+		height: 100%;
+
+		@include border_on(right, dotted, thin); 
+		padding: {
+			right: 1em;
+		}
+	}
+
+	#body_content_right {
+		width: 20%;
+		height: 100%;
+
+		padding: {
+			left: 1em;
+		}
+	}
+
+	&[class~="no_body_content_right"] {
+		#body_content_left {
+			width: 100%;
+			border: none;
+		}
+	}
+
+	&[class~="no_body_content_left"] {
+		#body_content_right {
+			width: 100%;
+			border:none;
+		}
+	}
+}
+
 
 #header {
 	width: 100%;
@@ -97,10 +107,6 @@ section {
 		display: block;
 		position: relative;
 	}
-
-	@import 'logo';
-	@import 'search';
-
 	.info {
 		position: relative;
 		.contact {
@@ -117,9 +123,12 @@ section {
 				top: 2em;
 			}
 		}
-		@import 'social';
 	}
 }
+
+@import 'logo';
+@import 'search';
+@import 'social';
 
 #body {
 	width: 100%;
@@ -141,11 +150,9 @@ section {
 		top: 1em;
 		bottom: 1em;
 	}
-
-	@import 'hero';
 }
 
-@import 'nav';
+@import 'hero';
 
 #footer {
 	padding: {
@@ -163,8 +170,6 @@ section {
 			margin: 0;
 		}
 	}
-
-	@import 'social';
 
 	.container_social_network_icons {
 		top: 0;

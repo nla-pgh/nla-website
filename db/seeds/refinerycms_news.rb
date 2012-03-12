@@ -18,7 +18,7 @@ if defined?(::Page)
     )
 
     Page.default_parts.each do |default_page_part|
-      page.parts.create(:title => default_page_part, :body => nil)
+      page.parts.create(:title => default_page_part, :body => nil, :side_body => nil)
     end
   end
 end

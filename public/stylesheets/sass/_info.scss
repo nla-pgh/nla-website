@@ -1,76 +1,30 @@
-#info_container {
+$padding: 0.25em;
 
-	$padding: 0.25em;
-
-	.item_title {
-		@include border_on(top, dotted, thin, $grey);
-		@include border_on(bottom, dotted, thin, $grey);
-		color: $red;
-		padding: {
-			top: $padding;
-			bottom: $padding;
-			left: $padding * 2;
-		}
-	}
+.item_title {
+	@include border_on(top, dotted, thin, $grey);
+	@include border_on(bottom, dotted, thin, $grey);
 	
-	.side_body {
-		display: inline-block;
-		position: absolute;
-		top: 0;
-		right: 0;
+	padding: {
+		top: $padding;
+		bottom: $padding;
+		left: $padding * 2;
+	}
+}
 
-		padding: 0;
-		margin: 0;
-		
-		padding: {
-			right: $padding * 4;
-		}
-
-		#social_network_feed {
-
-			h3 {
-				padding: 0;
-				margin: 0;
-				margin: {
-					bottom: 12px;
-				}
-			}
-			width: 20em;
-
-			div {
-				padding: {
-					left: $padding * 2;
-				}
-			}
-		}
+.news_body {
+	padding: {
+		left: $padding * 2;
 	}
 
-	#news_container {
-		display: inline-block;
-
-		@include border_on(right, dashed, thin);
+	section {
+		display: block;
+	}
+}
+	
+#social_network_feed {
+	div {
 		padding: {
-			right: $padding * 8;
-		}
-
-		#news {
-			margin: 0;
-			padding: 0;
-		}
-
-		width: 35em;
-
-
-		.news_body {
-			padding: {
-				left: $padding * 2;
-			}
-		}
-
-		a {
-			text-decoration: none;
-			color: $red;
-			font-size: 0.80em;
+			left: $padding * 2;
 		}
 	}
 }

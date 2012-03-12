@@ -1,3 +1,59 @@
 @import 'branding';
 
-@import 'info';
+$padding: 0.25em;
+
+#body_content_title {
+	display: none;
+}
+
+.item_title {
+	@include border_on(top, dotted, thin, $grey);
+	@include border_on(bottom, dotted, thin, $grey);
+	
+	padding: {
+		top: $padding;
+		bottom: $padding;
+		left: $padding * 2;
+	}
+}
+
+.news_body {
+	padding: {
+		left: $padding * 2;
+	}
+
+	section {
+		display: block;
+	}
+}
+	
+#social_network_feed {
+	div {
+		padding: {
+			left: $padding * 2;
+		}
+	}
+}
+
+#news_container {
+	display: inline-block;
+
+	@include border_on(right, dashed, thin);
+	padding: {
+		right: $padding * 8;
+	}
+
+	#news {
+		margin: 0;
+		padding: 0;
+	}
+
+	width: 35em;
+
+
+	.news_body {
+		padding: {
+			left: $padding * 2;
+		}
+	}
+}
