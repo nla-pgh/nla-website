@@ -54,6 +54,7 @@ body {
 
 #body_content {
 	width: $page_min_width;
+	min-height: 20em;
 
 	margin: auto;
 	position: relative;
@@ -68,8 +69,8 @@ body {
 
 	#body_content_left {
 		width: 70%;
+		height: 100%;
 
-		@include border_on(right, dotted, thin); 
 		padding: {
 			right: 1em;
 		}
@@ -77,6 +78,7 @@ body {
 
 	#body_content_right {
 		width: 20%;
+		height: 100%;
 
 		padding: {
 			left: 1em;
@@ -158,6 +160,7 @@ body {
 @import 'hero';
 
 #footer {
+	height: 100%;
 	padding: {
 		top: 0.5em;
 	}

@@ -86,6 +86,7 @@ nav {
 
 #body_content {
   width: 60em;
+  min-height: 20em;
   margin: auto;
   position: relative; }
   #body_content > section {
@@ -96,12 +97,11 @@ nav {
     margin: 0; }
   #body_content #body_content_left {
     width: 70%;
-    border-right: dotted;
-    border-width: thin;
-    border-color: #af0a0a;
+    height: 100%;
     padding-right: 1em; }
   #body_content #body_content_right {
     width: 20%;
+    height: 100%;
     padding-left: 1em; }
   #body_content[class~="no_body_content_right"] #body_content_left {
     width: 100%;
@@ -259,6 +259,7 @@ nav {
   color: white; }
 
 #footer {
+  height: 100%;
   padding-top: 0.5em;
   margin-top: 1em;
   background: #af0a0a;
