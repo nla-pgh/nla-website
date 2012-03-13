@@ -8,6 +8,7 @@
 
 <% content_for :body_content_left do %>
   <ul id="search_results">
+	<% if @results.any? %>
     <% @results.each do |result| %>
 			<% unless result.is_a?(Page) and result_url(result) == "/search"%>
       <li>
@@ -18,33 +19,10 @@
       </li>
 			<% end %>
     <% end %>
-  </ul>
-
+	</ul>
+	<% else %>
+		<p class='no_result'>Sorry, no matching results.</p>
+	<% end %>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
-<% content_for :stylesheets do %>
-  <style type='text/css'>
-		#body_content_left {
-				display: table;
-				margin: auto;	
-				text-align: left;
-		}
-
-    #search_results {
-      list-style: none;
-      padding: 0.5em;
-      margin: 0;
-			width: 100%;
-    }
-
-    #search_results li {
-      border-bottom: 1px solid #CCC;
-    }
-
-    #search_results li span.result_type {
-      float: right;
-      color: #CCC;
-    }
-  </style>
-<% end %>

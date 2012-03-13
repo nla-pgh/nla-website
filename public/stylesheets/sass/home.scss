@@ -35,25 +35,10 @@ $padding: 0.25em;
 	}
 }
 
-#news_container {
-	display: inline-block;
-
-	@include border_on(right, dashed, thin);
-	padding: {
-		right: $padding * 8;
+#news, #twitter {
+	margin: {
+		top: 0;
 	}
 
-	#news {
-		margin: 0;
-		padding: 0;
-	}
-
-	width: 35em;
-
-
-	.news_body {
-		padding: {
-			left: $padding * 2;
-		}
-	}
+	padding: 0;
 }

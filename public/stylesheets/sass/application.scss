@@ -54,6 +54,7 @@ body {
 
 #body_content {
 	width: $page_min_width;
+
 	margin: auto;
 	position: relative;
 
@@ -67,7 +68,6 @@ body {
 
 	#body_content_left {
 		width: 70%;
-		height: 100%;
 
 		@include border_on(right, dotted, thin); 
 		padding: {
@@ -77,7 +77,6 @@ body {
 
 	#body_content_right {
 		width: 20%;
-		height: 100%;
 
 		padding: {
 			left: 1em;
@@ -142,7 +141,11 @@ body {
 }
 
 #container_hero {
-	background: #868686;
+	$background: #868686;
+	background: $background;
+	
+	@include gradient(top, $grey, $white);
+
 	width: 100%;
 	height: 100%;
 
@@ -159,16 +162,27 @@ body {
 		top: 0.5em;
 	}
 
-	color: $grey;
+	margin: {
+		top: 1em;
+	}
+
+	background: $red;
+	@include gradient(top, $red, $grey);
+	color: $white;
 
 	.contact {
 		display: inline-block;
 		position: relative;
+	}
 
-		p {
-			padding: 0;
-			margin: 0;
-		}
+	a {
+		color: $white;
+	}
+
+	p {
+		padding: 0;
+		margin: 0;
+		font-size: small;
 	}
 
 	.container_social_network_icons {
@@ -189,7 +203,9 @@ body {
 }
 
 #body_content_title {
-	margin: 0;
-	padding: 0;
 	font-size: 2em;
+	margin: {
+		top: 0.5em;
+		bottom: 0.5em;
+	}
 }

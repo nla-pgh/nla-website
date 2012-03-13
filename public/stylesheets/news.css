@@ -6,6 +6,28 @@ html {
 #container_hero {
   display: none; }
 
+#recent_news_items h2 {
+  margin-top: 0;
+  padding: 0; }
+#recent_news_items ul {
+  display: block;
+  background: transparent;
+  list-style-type: circle; }
+#recent_news_items li {
+  display: list-item;
+  padding-bottom: 1em;
+  margin-left: 1em; }
+#recent_news_items a {
+  padding: 0;
+  color: #af0a0a; }
+  #recent_news_items a:hover {
+    background: inherit;
+    text-decoration: underline; }
+
+.news_item p {
+  margin-top: 0;
+  padding: 0; }
+
 .news_item_truncated {
   position: relative; }
   .news_item_truncated a {

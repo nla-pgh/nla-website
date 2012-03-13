@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+/** SASS Mixins **/
+html {
+  font-family: 'Ubuntu', sans-serif; }
+
+#container_hero {
+  display: none; }
+
+#search_results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  #search_results li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: dotted;
+    border-width: thin;
+    border-color: #af0a0a;
+    position: relative; }
+    #search_results li span {
+      position: absolute;
+      right: 0; }

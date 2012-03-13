@@ -4,6 +4,47 @@
 	display: none;
 }
 
+#recent_news_items {
+	h2 {
+		margin: {top: 0;}
+		padding: 0;
+	}
+
+	ul {
+		display: block;
+		background: transparent;
+		list-style-type: circle;
+	}
+
+	li {
+		display: list-item;
+		padding: {
+			bottom: 1em;
+		}
+
+		margin: {
+			left: 1em;
+		}
+	}
+
+	a {
+		padding: 0;
+		color: $red;
+
+		&:hover {
+			background: inherit;
+			text-decoration: underline;
+		}
+	}
+}
+
+.news_item {
+	p {
+		margin: { top: 0; }
+		padding: 0;
+	}
+}
+
 .news_item_truncated {
 	position: relative;
 	a {

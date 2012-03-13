@@ -7,9 +7,6 @@ html {
   display: none; }
 
 .field {
-  border-bottom: dotted;
-  border-width: thin;
-  border-color: #af0a0a;
   padding-top: 0.5em;
   padding-left: 0.5em;
   padding-bottom: 0.5em; }

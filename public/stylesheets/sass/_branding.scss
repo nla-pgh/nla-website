@@ -42,6 +42,13 @@ $page_min_width: 60em;
 		}
 }
 
+@mixin gradient($start, $src, $dest) {
+	background: -webkit-linear-gradient($start, $src, $dest);
+	background: -moz-linear-gradient($start, $src, $dest);
+	background: -ms-linear-gradient($start, $src, $dest);
+	background: -o-linear-gradient($start, $src, $dest);
+}
+
 html {
 		font-family: 'Ubuntu', sans-serif;
 }

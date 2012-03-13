@@ -5,8 +5,6 @@
 }
 
 .field {
-	@include border_on(bottom, dotted, thin);
-
 	padding: {
 		top: 0.5em;
 		left: 0.5em;

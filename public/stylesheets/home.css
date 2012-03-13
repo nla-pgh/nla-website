@@ -25,15 +25,6 @@ html {
 #social_network_feed div {
   padding-left: 0.5em; }
 
-#news_container {
-  display: inline-block;
-  border-right: dashed;
-  border-width: thin;
-  border-color: #af0a0a;
-  padding-right: 2em;
-  width: 35em; }
-  #news_container #news {
-    margin: 0;
-    padding: 0; }
-  #news_container .news_body {
-    padding-left: 0.5em; }
+#news, #twitter {
+  margin-top: 0;
+  padding: 0; }

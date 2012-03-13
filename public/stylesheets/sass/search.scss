@@ -1,0 +1,28 @@
+@import 'branding';
+
+#container_hero {
+	display: none;
+}
+
+#search_results {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+
+	li {
+		margin: {
+			top: 1em;
+			bottom: 1em;
+		}
+
+		@include border_on(bottom, dotted, thin);
+
+		position: relative;
+		
+		span {
+			position: absolute;
+			right: 0;
+		}
+	}
+}

@@ -7,10 +7,12 @@
 	right: 0;
 
 	section {
-		@include all_border(outset, medium);
+		@include all_border(outset, thick, $red + 50);
 		@include all_round();
 
 		background: $red;
+
+		@include gradient(top, $red + 50, $red - 45);
 
 		margin: {
 			top: 1.25em;

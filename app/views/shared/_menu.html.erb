@@ -15,7 +15,6 @@
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
   </ul>
-
-	<%= raw copywriting('Information', scope: 'Navigation', phrase_type: 'wysiwyg', default: 'Enter address here!') %>
+	<%= render partial: '/shared/address' %>
 </nav>
 <% end -%>
