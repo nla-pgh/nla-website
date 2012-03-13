@@ -1,11 +1,6 @@
 #container_take_action {
 	display: inline-block;
 
-	position: absolute;
-	vertical-align: top;
-
-	right: 0;
-
 	section {
 		@include all_border(outset, thick, $red + 50);
 		@include all_round();

@@ -1,6 +1,11 @@
 @import 'branding';
 
 // High-level class definitions //
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .icon {
 	height: 2em;
 	width: 2em;
@@ -9,7 +14,6 @@
 .centered {
 		width: $page_min_width;
 		margin: auto;
-		position: relative;
 }
 
 .selected {
@@ -47,7 +51,6 @@ body {
 	min-width: 60em;
 	max-width: 100%;
 	background: $white;
-	position: relative;
 }
 
 @import 'nav';
@@ -57,7 +60,6 @@ body {
 	min-height: 20em;
 
 	margin: auto;
-	position: relative;
 
 	&>section {
 		display: inline-block;
@@ -125,6 +127,10 @@ body {
 			}
 		}
 	}
+
+	.centered {
+		position: relative;
+	}
 }
 
 @import 'logo';
@@ -134,7 +140,6 @@ body {
 #body {
 	width: 100%;
 	margin: auto;
-	position: relative;
 	
 	padding: {
 		top: 1em;
@@ -160,6 +165,10 @@ body {
 @import 'hero';
 
 #footer {
+	.centered {
+		position: relative;
+	}
+
 	height: 100%;
 	padding: {
 		top: 0.5em;

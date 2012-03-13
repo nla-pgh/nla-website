@@ -7,7 +7,7 @@
     hide_children = RefinerySetting.find_or_set(:menu_hide_children, false) if hide_children.nil?
 -%>
 <nav id='<%= dom_id %>' class='<%= css %>'>
-  <ul>
+  <ul class='dropdown'>
     <%= render :partial => '/shared/menu_branch', :collection => roots,
                :locals => {
                  :hide_children => hide_children,
