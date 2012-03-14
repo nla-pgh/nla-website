@@ -53,4 +53,6 @@ gem 'refinerycms-portfolio', '~>0.9.9'
 gem 'refinerycms-copywriting'
 gem 'refinerycms-search', '~> 1.0.0', :git => 'git://github.com/resolve/refinerycms-search.git'
 
+gem 'fog'
+
 # END USER DEFINED
