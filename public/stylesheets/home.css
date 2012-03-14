@@ -28,3 +28,6 @@ html {
 #news, #twitter {
   margin-top: 0;
   padding: 0; }
+
+#documents, #partners {
+  padding-left: 0.5em; }

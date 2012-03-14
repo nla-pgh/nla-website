@@ -1,0 +1,70 @@
+@import 'branding';
+
+#container_hero {
+	display: none;
+}
+
+#body_content_title {
+	select {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+#body_content #body_content_right {
+	width: 15em;
+}
+
+#body_content_right {
+	h4 {
+		margin: {
+			bottom: 1em;
+		}
+	}
+}
+
+#portfolio_main_image_container {
+
+	img {
+		display: block;
+		width: 35em;
+		margin: {
+			left: 1em;
+			bottom: 0;
+			top: 0;
+			right: 0;
+		}
+		@include all_round(1em);
+	}
+}
+
+#portfolio_images {
+	.selected a img {
+		@include all_border(solid, thin);
+	}
+
+	.selected a {
+		background: transparent;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+
+	}	
+
+	li {
+		display: inline-block;
+	}
+}
+
+span.content {
+	p {
+
+		margin: {
+			top: 2em;
+			left: 1em;
+		}
+
+		text-align: center;
+		display: inline-block;
+	}
+}	

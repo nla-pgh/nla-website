@@ -19,6 +19,9 @@
 .selected {
 	a {
 		background: $grey;
+		-moz-box-shadow: 0 0 0.2em $grey;
+		-webkit-box-shadow: 0 0 0.2em $grey;
+		box-shadow: 0 0 0.2em $grey;
 	}
 }
 
@@ -43,6 +46,10 @@ a {
 	}
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: {top: 0.5em; bottom: 0.5em;}
+}
+
 body {
 	color: $grey;
 	text-align: left;
@@ -56,6 +63,13 @@ body {
 @import 'nav';
 
 #body_content {
+	p {
+		margin: {
+			top: 0.5em;
+			bottom: 0.5em;
+		}
+	}
+
 	width: $page_min_width;
 	min-height: 20em;
 
@@ -63,27 +77,20 @@ body {
 
 	&>section {
 		display: inline-block;
-		position: relative;
 		vertical-align: top;
-		padding: 0;
-		margin: 0;
 	}
 
 	#body_content_left {
-		width: 70%;
+		width: $page_min_width * 0.70;
 		height: 100%;
-
-		padding: {
-			right: 1em;
-		}
 	}
 
 	#body_content_right {
-		width: 20%;
+		width: $page_min_width * 0.20;
 		height: 100%;
 
-		padding: {
-			left: 1em;
+		margin: {
+			left: $page_min_width * 0.03;
 		}
 	}
 
@@ -106,15 +113,9 @@ body {
 #header {
 	width: 100%;
 
-	.right {
-		display: block;
-		position: relative;
-	}
 	.info {
-		position: relative;
 		.contact {
 			display: inline-block;
-			position: relative;
 			left: 0;
 
 			p {
@@ -184,7 +185,6 @@ body {
 
 	.contact {
 		display: inline-block;
-		position: relative;
 	}
 
 	a {

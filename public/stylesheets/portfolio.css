@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+/** SASS Mixins **/
+html {
+  font-family: 'Ubuntu', sans-serif; }
+
+#container_hero {
+  display: none; }
+
+#body_content_title select {
+  display: inline-block;
+  vertical-align: middle; }
+
+#body_content #body_content_right {
+  width: 15em; }
+
+#body_content_right h4 {
+  margin-bottom: 1em; }
+
+#portfolio_main_image_container img {
+  display: block;
+  width: 35em;
+  margin-left: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 0;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em; }
+
+#portfolio_images .selected a img {
+  border-top: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-left: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-right: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #af0a0a; }
+#portfolio_images .selected a {
+  background: transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+#portfolio_images li {
+  display: inline-block; }
+
+span.content p {
+  margin-top: 2em;
+  margin-left: 1em;
+  text-align: center;
+  display: inline-block; }

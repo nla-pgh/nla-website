@@ -46,7 +46,6 @@
 }
 
 .news_item_truncated {
-	position: relative;
 	a {
 		display: inline-block;
 		text-decoration: none;
@@ -77,3 +76,9 @@
 		text-decoration: underline;
 	}
 }
+
+article {
+	margin: {top: 0.5em; bottom: 0.5em;}
+}
+
+

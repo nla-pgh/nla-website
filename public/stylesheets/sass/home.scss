@@ -42,3 +42,9 @@ $padding: 0.25em;
 
 	padding: 0;
 }
+
+#documents, #partners {
+	padding: {
+		left: $padding * 2;
+	}
+}

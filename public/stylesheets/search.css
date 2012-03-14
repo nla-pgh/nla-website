@@ -21,3 +21,6 @@ html {
     #search_results li span {
       position: absolute;
       right: 0; }
+
+.no_result {
+  font-style: italic; }

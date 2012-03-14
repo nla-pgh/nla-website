@@ -6,6 +6,25 @@ html {
 #container_hero {
   display: none; }
 
+form {
+  border-top: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-left: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-right: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #af0a0a;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  padding: 1em; }
+
 .field {
   padding-top: 0.5em;
   padding-left: 0.5em;
@@ -21,3 +40,22 @@ html {
 
 .actions {
   padding-top: 1em; }
+
+p {
+  padding-bottom: 1em; }
+
+#errorExplanation {
+  background: #ffd2d2;
+  padding: 1em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  color: #af0a0a;
+  margin-bottom: 0.5em; }
+  #errorExplanation ul {
+    padding-left: 1em; }
+  #errorExplanation li {
+    display: list-item;
+    list-style-type: circle;
+    font-weight: bold; }

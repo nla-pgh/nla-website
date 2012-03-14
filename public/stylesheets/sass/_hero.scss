@@ -1,22 +1,61 @@
 #hero {
-	@import 'prezi';
-	@import 'take_action';
 
 	position: static;
 
-	#message {
-		margin: 0;
-		padding: {
-			top: 0.25em;
+	#prezi-player {
+		display: inline-block;
+		@include all_round(0.25em);
+		@include all_border(outset, 0.5em, white);
+
+		width: $page_min_width * 0.70;
+		height: 20em;
+
+		#prezi {
+			width: $page_min_width * 0.70;
+			height: 20em;
+		}
+	}
+
+	#container_take_action {
+		display: inline-block;
+		vertical-align: top;
+
+		margin: {
+			left: $page_min_width * 0.05;
 		}
 
-		font-weight: bold;
-		display: inline-block;
+		section {
+			@include all_border(outset, thick, $red + 50);
+			@include all_round();
 
-		position: absolute;
-		right: 0;
+			background: $red;
 
-		font-size: 4em;
-		color: $white;
+			@include gradient(top, $red + 50, $red - 45);
+
+			margin: {
+				top: 1.1em;
+			}
+
+			width: $page_min_width * 0.217;
+			height: 5em;
+
+			a {
+				display: block;
+				margin: auto;
+
+				width: 4em;
+
+				color: $white;
+				text: {
+					decoration: none;
+					shadow: 0.2em 0.2em 0.2em $grey;
+				}
+
+				font: {
+					weight: bold;
+					size: xx-large;
+				}
+			}
+		}
 	}
 }

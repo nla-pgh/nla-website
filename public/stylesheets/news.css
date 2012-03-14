@@ -28,16 +28,14 @@ html {
   margin-top: 0;
   padding: 0; }
 
-.news_item_truncated {
-  position: relative; }
-  .news_item_truncated a {
-    display: inline-block;
-    text-decoration: none;
-    color: #af0a0a; }
-    .news_item_truncated a:hover {
-      text-decoration: underline; }
-  .news_item_truncated p {
-    padding-left: 1em; }
+.news_item_truncated a {
+  display: inline-block;
+  text-decoration: none;
+  color: #af0a0a; }
+  .news_item_truncated a:hover {
+    text-decoration: underline; }
+.news_item_truncated p {
+  padding-left: 1em; }
 
 .read_more {
   display: inline-block;
@@ -46,3 +44,7 @@ html {
   padding-left: 1em; }
   .read_more:hover {
     text-decoration: underline; }
+
+article {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }

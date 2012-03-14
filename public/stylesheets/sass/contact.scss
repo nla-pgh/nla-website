@@ -4,6 +4,13 @@
 	display: none;
 }
 
+form {
+	@include all_border(solid, thin);
+	@include all_round();
+
+	padding: 1em;
+}
+
 .field {
 	padding: {
 		top: 0.5em;
@@ -28,5 +35,34 @@
 .actions {
 	padding: {
 		top: 1em;
+	}
+}
+
+p {
+	padding: {bottom: 1em;}
+}
+
+#errorExplanation {
+	background: $red + 200;
+	padding: 1em;
+	@include all_round();
+	color: $red;
+
+	margin: {
+		bottom: 0.5em;
+	}
+
+	ul {
+
+		padding: {
+			left: 1em;
+		}
+	}
+
+	li {
+		display: list-item;
+		list-style-type: circle;
+
+		font-weight: bold;
 	}
 }
