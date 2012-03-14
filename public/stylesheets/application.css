@@ -125,8 +125,6 @@ nav {
       padding-top: 0.25em; }
     nav ul.dropdown li:hover > ul {
       visibility: visible; }
-    nav ul.dropdown li {
-      margin-bottom: 0.5em; }
 
 #body_content {
   width: 60em;
