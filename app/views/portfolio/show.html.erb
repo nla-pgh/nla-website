@@ -1,7 +1,7 @@
 <% content_for :title, @portfolio_entry.title %>
 
 <% content_for :body_content_title do %>
-  <span><%= @master_entry.title %></span>
+  <span><%= @master_entry.title %> Gallery</span>
 
   <%= select(:portfolio_entry, :to_param,
              @portfolio_entries.collect{|entry|
@@ -17,7 +17,6 @@
 <% end %>
 
 <% content_for :body_content_right do %>
-  <h4><%= @portfolio_entry.title %> Gallery</h4>
   <ul id='portfolio_images'>
     <% @portfolio_entry.images.each_with_index do |image, index| %>
       <li class="<%= cycle('odd', 'even') %> <%= (index == params[:image_id].to_i) ? 'selected' : 'other' %>">
