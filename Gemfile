@@ -18,11 +18,6 @@ group :development, :test do
   # Finally, run 'rake' to run the tests.
   gem 'refinerycms-testing',    '~> 1.0.9'
   gem 'capybara'
-
-  if RbConfig::CONFIG['target_os'] =~ /darwin/i
-    gem 'growl'
-  end
-
   gem 'spork', '~> 0.9.0.rc', :platforms => :ruby
   gem 'guard-spork', :platforms => :ruby
   gem 'guard-rspec', :platforms => :ruby
