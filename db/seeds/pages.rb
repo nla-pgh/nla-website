@@ -32,8 +32,8 @@ page_not_found_page.parts.create({
 
 take_action = Page.create(title: "Take Action",
 													deletable: false,
-													link_url: "^/take-action$",
-													position => (page_position += 1))
+													position: (page_position += 1))
+
 take_action.parts.create(title: "Body",
 												 body: "",
 												 position: 0)

@@ -10,7 +10,7 @@
   <ul id="search_results">
 	<% if @results.any? %>
     <% @results.each do |result| %>
-			<% unless result.is_a?(Page) and result_url(result) == "/search"%>
+			<% unless result.is_a?(Page) and result_url(result) == "^/search.*"%>
       <li>
         <span class='result_type'>
           <%= result.class.to_s.titleize %>

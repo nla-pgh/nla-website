@@ -22,7 +22,7 @@ if defined?(::Page)
   })
   contact_us_page.parts.create({
     :title => "Side Body",
-    :body => "<p>5429 Penn Ave.</p><p>Pittsburgh, PA</p><p>Phone:</p><p>Fax:</p>",
+    :body => "<p>5429 Penn Ave.<br />Pittsburgh, PA<br />Phone: (412) 363-1910<br />Fax: (412) 363-1592</p>",
     :position => 1
   })
   contact_us_page_position = -1

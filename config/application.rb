@@ -47,7 +47,7 @@ module HeroWebsite
 
 		# Website Search Function
 		config.to_prepare do
-				Refinery.searchable_models = [Page, NewsItem, CopywritingPhrase]
+				Refinery.searchable_models = [Page, NewsItem, CopywritingPhrase, PortfolioEntry]
 		end
 
 		# Set locale and time
