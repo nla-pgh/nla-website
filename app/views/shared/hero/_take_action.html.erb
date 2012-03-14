@@ -1,11 +1,21 @@
 <section id='container_take_action'>
-	<section class='button'>
-			<%= link_to 'Our Vision', "" %>
-	</section>
-	<section class='button'>
-			<%= link_to 'Our Mission', "" %>
-	</section>
-	<section class='button'>
-			<%= link_to 'Take Action', "" %>
-	</section>
+<button id='vision' type='button' onclick="show_vision();">
+	Our Vision
+</button>
+
+	<div id="dialog-vision" title="Our Vision">
+	<p>By 2013, we envision thriving children, families and communities anchored by a network of accountable, collaborative community, educational and faith organizations.</p>
+	</div>
+
+	<div id="dialog-mission" title="Our Mission">
+	<p>Improving the education and opportunities of African-American and lower income families through strategic partnerships with community and faith-based organizations.</p>
+</div>
+
+<button id='mission' type='button' onclick="show_mission();">
+	Our Mission
+</button>
+
+<button id='take action' type='button'>
+	Take Action!
+</button>
 </section>
