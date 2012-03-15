@@ -64,7 +64,7 @@ li {
 
 nav {
   position: relative; }
-  nav p {
+  nav p a {
     color: white;
     display: inline-block;
     position: absolute;
