@@ -22,6 +22,12 @@ HeroWebsite::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+	
+	# Sass
+	Sass::Plugin.add_template_location(
+			Rails.root.join('public/stylesheets/sass').to_s,
+			Rails.root.join('public/stylesheets').to_s
+	)
 end
 
 Refinery.rescue_not_found = false

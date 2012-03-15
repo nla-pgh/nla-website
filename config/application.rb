@@ -39,11 +39,6 @@ module HeroWebsite
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
-		# Sass
-		Sass::Plugin.add_template_location(
-				Rails.root.join('public/stylesheets/sass').to_s,
-				Rails.root.join('public/stylesheets').to_s
-		)
 
 		# Website Search Function
 		config.to_prepare do
@@ -52,5 +47,13 @@ module HeroWebsite
 
 		# Set locale and time
 		config.time_zone = "Eastern Time (US & Canada)"
+
+		# Setup Twitter
+		Twitter.configure do |config|
+			config.consumer_key = "uCtt8eBjjrZ07Wcsbyr1ww"
+			config.consumer_secret = "f1MPEXtgYzR4mttmSVOQ6Q26Z8lLqLLrWMS44CAIitQ"
+			config.oauth_token = "466585376-ZUhSXaop9VcVHtEszZukiTE45MbT0pm5UUH91Bi5"
+			config.oauth_token_secret = "niJe3XQoZrtWOnDgYBc1jHwwcqHe7Tnm0KAWbcpI"
+		end
   end
 end

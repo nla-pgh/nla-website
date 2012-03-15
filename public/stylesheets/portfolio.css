@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
 /** SASS Mixins **/
 html {
   font-family: 'Ubuntu', sans-serif; }
@@ -11,22 +10,16 @@ html {
   vertical-align: middle; }
 
 #body_content #body_content_right {
-  width: 15em; }
-
-#body_content_right h4 {
-  margin-bottom: 1em; }
+  width: 12em; }
 
 #portfolio_main_image_container img {
   display: block;
-  width: 35em;
-  margin-left: 1em;
-  margin-bottom: 0;
-  margin-top: 0;
-  margin-right: 0;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em; }
+  width: 45em;
+  margin: 0;
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
+  border-bottom-left-radius: 0.75em;
+  border-bottom-right-radius: 0.75em; }
 
 #portfolio_images .selected a img {
   border-top: solid;

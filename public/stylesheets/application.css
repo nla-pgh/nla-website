@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
 /** SASS Mixins **/
 html {
   font-family: 'Ubuntu', sans-serif; }
@@ -142,7 +141,7 @@ nav {
   #body_content #body_content_right {
     width: 12em;
     height: 100%;
-    margin-left: 1.8em; }
+    margin-left: 0.6em; }
   #body_content[class~="no_body_content_right"] #body_content_left {
     width: 100%;
     border: none; }
