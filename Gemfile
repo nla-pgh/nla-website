@@ -8,7 +8,6 @@ gem "jquery-rails"
 
 gem 'refinerycms',              '~> 1.0.9'
 
-gem 'sass'
 gem 'haml', '>=3.0.6'
 gem 'twitter'
 
@@ -23,6 +22,7 @@ group :development, :test do
   gem 'guard-rspec', :platforms => :ruby
   gem 'generator_spec'
 	gem 'sqlite3'
+	gem 'sass'
 end
 
 group :production do
