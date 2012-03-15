@@ -64,12 +64,13 @@ li {
 
 nav {
   position: relative; }
-  nav p a {
-    color: white;
+  nav p {
     display: inline-block;
     position: absolute;
     right: 0;
     top: 25%; }
+    nav p a {
+      color: white; }
   nav ul.dropdown {
     position: relative;
     height: 2.15em; }

@@ -13,8 +13,9 @@ li {list-style: none;}
 nav {
 	position: relative;
 
-	p a {
-		color: $white;
+	p {
+		a { color: $white; }
+
 		display: inline-block;
 
 		position: absolute;
