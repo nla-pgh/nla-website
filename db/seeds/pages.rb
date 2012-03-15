@@ -29,3 +29,11 @@ page_not_found_page.parts.create({
               :body => "<h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a href='/'>Return to the home page</a></p>",
               :position => 0
             })
+
+take_action = Page.create(title: "Take Action",
+													deletable: false,
+													position: (page_position += 1))
+
+take_action.parts.create(title: "Body",
+												 body: "",
+												 position: 0)

@@ -2,6 +2,10 @@
 	<%= stylesheet_link_tag 'home' %>
 <% end %>
 
+<% content_for :javascripts do %>
+	<%= javascript_include_tag 'take_action' %>
+<% end %>
+
 <% content_for :body_content_left, (render partial: "recent_news") %>
 <% content_for :body_content_right, (render partial: "/shared/side_bar/side_bar") %>
 

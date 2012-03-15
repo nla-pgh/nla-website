@@ -14,7 +14,8 @@ nav {
 	position: relative;
 
 	p {
-		color: $white;
+		a { color: $white; }
+
 		display: inline-block;
 
 		position: absolute;

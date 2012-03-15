@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
 @import 'branding';
 
 // High-level class definitions //
@@ -95,11 +96,11 @@ body {
 	}
 
 	#body_content_right {
-		width: $page_min_width * 0.20;
+		width: $page_min_width * 0.27;
 		height: 100%;
 
 		margin: {
-			left: $page_min_width * 0.03;
+			left: $page_min_width * 0.02;
 		}
 	}
 

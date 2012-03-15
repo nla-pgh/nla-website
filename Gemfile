@@ -8,8 +8,6 @@ gem "jquery-rails"
 
 gem 'refinerycms',              '~> 1.0.9'
 
-gem 'sass'
-gem 'haml', '>=3.0.6'
 gem 'twitter'
 
 group :development, :test do
@@ -18,16 +16,13 @@ group :development, :test do
   # Finally, run 'rake' to run the tests.
   gem 'refinerycms-testing',    '~> 1.0.9'
   gem 'capybara'
-
-  if RbConfig::CONFIG['target_os'] =~ /darwin/i
-    gem 'growl'
-  end
-
   gem 'spork', '~> 0.9.0.rc', :platforms => :ruby
   gem 'guard-spork', :platforms => :ruby
   gem 'guard-rspec', :platforms => :ruby
   gem 'generator_spec'
 	gem 'sqlite3'
+	gem 'sass'
+	gem 'haml', '>=3.0.6'
 end
 
 group :production do
@@ -52,5 +47,7 @@ gem 'refinerycms-i18n',         '~> 1.0.0'
 gem 'refinerycms-portfolio', '~>0.9.9'
 gem 'refinerycms-copywriting'
 gem 'refinerycms-search', '~> 1.0.0', :git => 'git://github.com/resolve/refinerycms-search.git'
+
+gem 'fog'
 
 # END USER DEFINED

@@ -16,11 +16,13 @@
   <%= yield :stylesheets %>
   <%= render :partial => '/shared/google_analytics' unless local_request? %>
 
-  <%= javascript_include_tag 'modernizr-min' %>
-	<%= javascript_include_tag 'jquery.min.js' %>
-	<%= javascript_include_tag 'jquery-ui.min.js' %>
-	<%= javascript_include_tag 'jquery_ujs.js' %>
-	<%= javascript_include_tag 'jquery.dropdownPlain.js' %>
+	<%= stylesheet_link_tag 'jquery-ui-1.8.18.custom.css' %>
 
-	<%= auto_discovery_link_tag(:rss, news_items_url(:format => 'rss')) %>
+  <%= javascript_include_tag 'modernizr-min' %>
+	<%= javascript_include_tag 'jquery-1.7.1.min' %>
+	<%= javascript_include_tag 'jquery-ui-1.8.18.custom.min' %>
+	<%= javascript_include_tag 'jquery.dropdownPlain' %>
+	<%= javascript_include_tag 'take_action' %>
+
+	<%= auto_discovery_link_tag(:rss, news_items_url(:format => 'rss/xml')) %>
 </head>

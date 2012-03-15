@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
 /** SASS Mixins **/
 html {
   font-family: 'Ubuntu', sans-serif; }
@@ -73,11 +72,12 @@ li {
 nav {
   position: relative; }
   nav p {
-    color: white;
     display: inline-block;
     position: absolute;
     right: 0;
     top: 25%; }
+    nav p a {
+      color: white; }
   nav ul.dropdown {
     position: relative;
     height: 2.15em; }
@@ -147,9 +147,9 @@ nav {
     width: 42em;
     height: 100%; }
   #body_content #body_content_right {
-    width: 12em;
+    width: 16.2em;
     height: 100%;
-    margin-left: 1.8em; }
+    margin-left: 1.2em; }
   #body_content[class~="no_body_content_right"] #body_content_left {
     width: 100%;
     border: none; }
@@ -257,7 +257,7 @@ nav {
     display: inline-block;
     vertical-align: top;
     margin-left: 3em; }
-    #hero #container_take_action section {
+    #hero #container_take_action button {
       border-top: outset;
       border-width: thick;
       border-color: #e13c3c;
@@ -279,18 +279,21 @@ nav {
       background: -moz-linear-gradient(top, #e13c3c, #820000);
       background: -ms-linear-gradient(top, #e13c3c, #820000);
       background: -o-linear-gradient(top, #e13c3c, #820000);
-      margin-top: 1.1em;
-      width: 13.02em;
-      height: 5em; }
-      #hero #container_take_action section a {
-        display: block;
-        margin: auto;
-        width: 4em;
-        color: white;
-        text-decoration: none;
-        text-shadow: 0.2em 0.2em 0.2em #282828;
-        font-weight: bold;
-        font-size: xx-large; }
+      display: block;
+      margin-top: 0.35em;
+      width: 6.8em;
+      height: 3em;
+      color: white;
+      text-decoration: none;
+      text-shadow: 0.2em 0.2em 0.2em #282828;
+      font-weight: bold;
+      font-size: xx-large; }
+      #hero #container_take_action button:hover {
+        background: #700000;
+        background: -webkit-linear-gradient(top, #a23232, #430000);
+        background: -moz-linear-gradient(top, #a23232, #430000);
+        background: -ms-linear-gradient(top, #a23232, #430000);
+        background: -o-linear-gradient(top, #a23232, #430000); }
 
 #footer {
   min-height: 24%;

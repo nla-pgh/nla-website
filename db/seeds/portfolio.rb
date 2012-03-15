@@ -13,7 +13,5 @@ unless Page.find_by_link_url('/portfolio').present?
     :deletable => false,
     :position => ((Page.maximum(:position, :conditions => {:parent_id => nil}) || -1)+1)
   })
-  Page.default_parts.each do |default_page_part|
-    page.parts.create(:title => default_page_part, :body => nil)
-  end
+	page.parts.create(title: "Body", body: "")
 end
