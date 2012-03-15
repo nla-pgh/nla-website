@@ -54,8 +54,10 @@ html {
     display: inline-block;
     margin: 0.5em; }
 
-span.content p {
+.content {
+  border-top: solid;
+  border-width: thin;
+  border-color: #af0a0a;
   margin-top: 2em;
   margin-left: 1em;
-  text-align: center;
-  display: inline-block; }
+  padding-top: 1em; }

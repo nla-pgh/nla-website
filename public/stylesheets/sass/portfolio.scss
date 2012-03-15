@@ -19,6 +19,8 @@
 		margin: auto; 
 		@include all_round(0.75em);
 	}
+
+	
 }
 
 #portfolio_images {
@@ -62,15 +64,14 @@
 
 }
 
-span.content {
-	p {
+.content {
 
-		margin: {
-			top: 2em;
-			left: 1em;
-		}
+	@include border_on(top, solid, thin);
 
-		text-align: center;
-		display: inline-block;
+	margin: {
+		top: 2em;
+		left: 1em;
 	}
+
+	padding: {top: 1em;}
 }	
