@@ -28,6 +28,8 @@ $(function() {
 			}
 		}
 	});
+
+	$("#prezi").append('<param name="wmode" value="opaque">');
 });
 
 function show_vision() {
