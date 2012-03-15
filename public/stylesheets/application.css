@@ -139,9 +139,9 @@ nav {
     width: 42em;
     height: 100%; }
   #body_content #body_content_right {
-    width: 12em;
+    width: 16.2em;
     height: 100%;
-    margin-left: 0.6em; }
+    margin-left: 1.2em; }
   #body_content[class~="no_body_content_right"] #body_content_left {
     width: 100%;
     border: none; }

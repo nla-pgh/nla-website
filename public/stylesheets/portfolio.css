@@ -9,38 +9,50 @@ html {
   display: inline-block;
   vertical-align: middle; }
 
-#body_content #body_content_right {
-  width: 12em; }
-
 #portfolio_main_image_container img {
   display: block;
-  width: 45em;
-  margin: 0;
+  max-width: 45em;
+  margin: auto;
   border-top-left-radius: 0.75em;
   border-top-right-radius: 0.75em;
   border-bottom-left-radius: 0.75em;
   border-bottom-right-radius: 0.75em; }
 
-#portfolio_images .selected a img {
-  border-top: solid;
-  border-width: thin;
-  border-color: #af0a0a;
-  border-left: solid;
-  border-width: thin;
-  border-color: #af0a0a;
-  border-right: solid;
-  border-width: thin;
-  border-color: #af0a0a;
-  border-bottom: solid;
-  border-width: thin;
-  border-color: #af0a0a; }
-#portfolio_images .selected a {
-  background: transparent;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-#portfolio_images li {
-  display: inline-block; }
+#portfolio_images {
+  max-height: 30em;
+  overflow: auto; }
+  #portfolio_images ul {
+    margin: 0.5em; }
+  #portfolio_images .selected img {
+    border-top: solid;
+    border-width: thin;
+    border-color: #af0a0a;
+    border-left: solid;
+    border-width: thin;
+    border-color: #af0a0a;
+    border-right: solid;
+    border-width: thin;
+    border-color: #af0a0a;
+    border-bottom: solid;
+    border-width: thin;
+    border-color: #af0a0a;
+    opacity: 1.0;
+    filter: alpha(opacity=100); }
+  #portfolio_images .other img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */ }
+    #portfolio_images .other img:hover {
+      opacity: 1.0;
+      filter: alpha(opacity=100); }
+  #portfolio_images .selected a {
+    background: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  #portfolio_images li {
+    display: inline-block;
+    margin: 0.5em; }
 
 span.content p {
   margin-top: 2em;
