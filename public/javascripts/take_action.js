@@ -30,6 +30,7 @@ $(function() {
 	});
 
 	$("#prezi").append('<param name="wmode" value="opaque">');
+	$("#documents p").prepend('<span class="ui-icon ui-icon-document" style="float: left"></span>');
 });
 
 function show_vision() {
