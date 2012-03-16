@@ -256,7 +256,7 @@ nav {
   #hero #container_take_action {
     display: inline-block;
     vertical-align: top;
-    margin-left: 3em; }
+    margin-left: 2.4em; }
     #hero #container_take_action button {
       border-top: outset;
       border-width: thick;
@@ -281,7 +281,7 @@ nav {
       background: -o-linear-gradient(top, #e13c3c, #820000);
       display: block;
       margin-top: 0.35em;
-      width: 6.8em;
+      width: 6.9em;
       height: 3em;
       color: white;
       text-decoration: none;
