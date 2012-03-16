@@ -3,8 +3,12 @@
 $padding: 0.25em;
 
 .nav_strip {
-
+	width: 100%;
+	margin: {top: 9.62em;}
+	top: 0;
+	position: fixed;
 	background: $red;
+	z-index: 999;
 }
 
 ul {list-style: none;}

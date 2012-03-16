@@ -67,6 +67,7 @@ body {
 }
 
 #container_body {
+	padding: {top: 11.813em;}
 	min-height: 50%;
 }
 
@@ -121,7 +122,11 @@ body {
 
 
 #header {
+	position: fixed;
+	top: 0;
 	width: 100%;
+	background: $white;
+	z-index:998;
 
 	.info {
 		.contact {
@@ -180,7 +185,7 @@ body {
 		position: relative;
 	}
 
-	min-height: 24%;
+	min-height: 12%;
 
 	padding: {
 		top: 0.5em;
@@ -192,7 +197,6 @@ body {
 
 	background: $red;
 	
-	//@include gradient(top, $red, $grey);
 	color: $white;
 
 	.contact {
