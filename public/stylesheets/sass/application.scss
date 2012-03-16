@@ -191,7 +191,8 @@ body {
 	}
 
 	background: $red;
-	@include gradient(top, $red, $grey);
+	
+	//@include gradient(top, $red, $grey);
 	color: $white;
 
 	.contact {
