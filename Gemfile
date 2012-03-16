@@ -7,7 +7,6 @@ gem "jquery-rails"
 # Anything you put in here will be overridden when the app gets updated.
 
 gem 'refinerycms',              '~> 1.0.9'
-
 gem 'twitter'
 
 group :development, :test do
