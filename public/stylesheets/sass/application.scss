@@ -196,6 +196,7 @@ body {
 	}
 
 	background: #700000;
+	@include gradient(top, $red, #700000);
 	
 	color: $white;
 
