@@ -309,6 +309,10 @@ nav {
   padding-top: 0.5em;
   margin-top: 1em;
   background: #700000;
+  background: -webkit-linear-gradient(top, #af0a0a, #700000);
+  background: -moz-linear-gradient(top, #af0a0a, #700000);
+  background: -ms-linear-gradient(top, #af0a0a, #700000);
+  background: -o-linear-gradient(top, #af0a0a, #700000);
   color: white; }
   #footer .centered {
     position: relative; }
