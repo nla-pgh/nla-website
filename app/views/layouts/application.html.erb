@@ -11,6 +11,7 @@
 		<section id='container_body'>
 
 			<%= render partial: '/shared/hero/hero' %>
+
 			<section id='body'>
 				<%= yield %>
 			</section>
@@ -18,7 +19,6 @@
 		</section>
 
 		<% render partial: '/shared/nav/nav' %>
-
 		<%= render :partial => "/shared/footer/footer" -%>
   </body>
 </html>
