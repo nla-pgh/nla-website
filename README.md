@@ -6,7 +6,7 @@ Neighborhood Learning Alliance is a non-profit organization based in Pittsburgh,
 # Contact Information
 * * *
 
-218 North Highland Avenue *moving in March, 2012*
+5429 Penn Ave
 
 Pittsburgh, PA 15206
 

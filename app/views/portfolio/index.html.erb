@@ -2,10 +2,6 @@
 	<%=  stylesheet_link_tag "portfolio" %>
 <% end %>
 
-<% content_for :body_content_title do -%>
-  
-<% end -%>
-
 <% content_for :body_content_left do -%>
   <% @portfolio_entries.each do | portfolio | -%>
     <span>
